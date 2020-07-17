@@ -4348,7 +4348,7 @@ button.close {
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -4411,6 +4411,7 @@ button.close {
   outline: 0; }
 
 .modal-backdrop {
+	display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -7467,6 +7468,9 @@ h1, h2, h3, h4, h5,
 .hero-wrap {
   width: 100%;
   position: relative; }
+  
+  /*colorpage*/
+  
   .hero-wrap .overlay {
     position: absolute;
     top: 0;
@@ -7476,7 +7480,7 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: .6;
     width: 50%;
-    background: #f1b8c4; }
+    background: #f9dcc4; }
   .hero-wrap .slider-text {
     color: #fff;
     position: relative; }
@@ -9086,3 +9090,8 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+	
+#connectionButton {
+	color: black;
+	border: white 0px;
+}

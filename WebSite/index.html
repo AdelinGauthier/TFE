@@ -19,13 +19,15 @@
 
     <link rel="stylesheet" href="css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	
+
 	
 	
 	
@@ -44,8 +46,98 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link">Connexion&nbsp &nbsp<i class='fas fa-user'></i></a></li>
+			  <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#connexion">Connexion&nbsp &nbsp <i class='fas fa-user'></i></a></li>
+			  
+			
 
+<!-- Connection button -->
+
+			
+			  
+			  <div id="connexion" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title">Connexion</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="/examples/actions/confirmation.php" method="post">
+					<div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Adresse mail" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Mot de passe" required="required">					
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+					</div>
+					<div class="form-group">
+						<input type="button" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#creationCompte" value="Créer un compte">	
+					</div>
+				</form>				
+				
+			</div>
+			<div class="modal-footer">
+				<a href="#">Forgot Password?</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+			  
+		
+
+
+
+<div id="creationCompte" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title">Création de mon compte</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="/examples/actions/confirmation.php" method="post">
+					<div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Nom" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Prénom" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-envelope"></i>
+						<input type="text" class="form-control" placeholder="Adresse mail" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Mot de passe" required="required">					
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Confirmation du mot de passe" required="required">					
+					</div>
+					<div class="form-group">
+						<input type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#creationCompte" value="Je crée mon compte">
+					</div>
+				</form>				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+			  
 	        </ul>
 	      </div>
 	    </div>
@@ -62,11 +154,6 @@
             <h1>Nora Mazy</h1>
             <h2><span>Soins du regard</span></h2>
           </div>
-          <div class="mouse">
-						<a href="#" class="mouse-icon">
-							<div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
-						</a>
-					</div>
         </div>
       </div>
     </div>
@@ -225,16 +312,10 @@
         <div class="container">
           <div class="row d-flex justify-content-center py-5">
             <div class="col-md-7 text-center heading-section ftco-animate">
-            	<h1 class="big">Inscription</h1>
-              <h2>Inscrivez-vous à ma newsletter</h2>
+            	<h1 class="big">Promo</h1>
+              <h2>Les promotions</h2>
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
