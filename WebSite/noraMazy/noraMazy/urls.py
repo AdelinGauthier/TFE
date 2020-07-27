@@ -17,16 +17,19 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import include, url
-from soins import views
+from Accueil import views
+from Connexion import views
 
 urlpatterns = [
-    path(r'', views.index),
-    path(r'soins/', include('soins.urls')),
+    path(r'', include('Accueil.urls')),
+    path(r'Accueil/', include('Accueil.urls')),
+    path(r'Connexion/', views.index),
     path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
+                      url(r'^__debug__/', include(debug_toolbar.urls)),
+                  ] + urlpatterns
