@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static "css/open-iconic-bootstrap.min.css" %}">
+      <link rel="stylesheet" href="{% static "css/ConnexionNavBar.css" %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     
     <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
@@ -48,18 +49,40 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Accueil</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+
               {% if user.is_authenticated %}
                 <li class="nav-item"><a href="compte.html" class="nav-link">Mon compte</a></li>
 			  {% endif %}
-                <li class="nav-item"><a class="nav-link" data-toggle="modal" href="#connexion">Connexion&nbsp &nbsp <i class='fas fa-user'></i></a></li>
-			  
-			
+
+
+                {% if not user.is_authenticated %}
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Connexion &nbsp <i class='fas fa-user'>&nbsp</i></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'login' %}">Connexion</a>
+                          <a class="dropdown-item" href="{% url 'Register' %}">Créer un compte</a>
+                        {% else %}
+                      <a class="dropdown-item" href="#">Déconnexion</a>
+                    </div>
+                </li>
+                {% endif %}
+
+
+            {% if user.is_authenticated %}
+                <li class="nav-item"><a href="" class="nav-link">Déconnexion &nbsp &nbsp <i class='fas fa-user'></i></a></li>
+			  {% endif %}
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
 
 <!-- Connection button -->
 
 			
-			  
-			  <div id="connexion" class="modal fade">
+<!--
+			  <div id="connexion," class="modal fade">
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">				
@@ -92,15 +115,11 @@
 	</div>
 </div>
 
+//-->
 
 
 
 
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
 		
 		<div class="hero-wrap js-fullheight" style="background-image: url({% static "images/NoraMazy2.jpg"%}); ">
       <div class="overlay"></div>
