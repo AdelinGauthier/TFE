@@ -18,12 +18,11 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import include, url
 from Accueil import views
-from Accounts import views
+from users import views
 
 urlpatterns = [
-    path(r'', include('Accueil.urls')),
-    path('Accounts/', include('django.contrib.auth.urls')),
-    path(r'Registration/', include('Accounts.urls')),
+    path(r'', include('Accueil.urls'), name='Accueil'),
+    path('account/', include('users.urls')),
     path('admin/', admin.site.urls),
 ]
 

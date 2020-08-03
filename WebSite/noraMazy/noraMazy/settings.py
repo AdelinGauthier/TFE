@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'Accueil.apps.AccueilConfig',
-    'Accounts.apps.AccountsConfig',
+    'crispy_forms',
+    'users',
 ]
+
+AUTH_USER_MODEL = 'users.User'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',

@@ -1,9 +1,6 @@
-from django.conf.urls import url
-from . import views  # import views so we can use them in urls.
-from .views import *
+from django.conf.urls import include, url
+from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url('Connexion/', Connexion, name="Connexion"),
-    url('Register/', Registration, name="Register"),
 ]
