@@ -53,12 +53,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     historique = models.TextField(blank=True)
     adress1 = models.CharField(max_length=254, null=True, blank=True)
     adress2 = models.CharField(max_length=254, null=True, blank=True)
-    dateNaiss = models.DateTimeField(null=True, blank=True)
+    dateNaiss = models.DateField(null=True, blank=True)
     fidelity = models.IntegerField(null=True, blank=True)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['story', 'name', 'forename', 'historique', 'adress1', 'adress2', 'dateNaiss', 'fidelity']
+    REQUIRED_FIELDS = ['name', 'forename', 'adress1', 'adress2', 'dateNaiss']
 
     objects = UserManager()
 
