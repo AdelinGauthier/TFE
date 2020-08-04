@@ -6,7 +6,7 @@ from django.utils import timezone
 class UserManager(BaseUserManager):
 
     def _create_user(self, email, password, is_staff, is_superuser, story, name, forename, historique, adress1, adress2,
-                     dateNaiss, fidelity):
+                     dateNaiss, fidelity, phone):
         if not email:
             raise ValueError('Users must have an email address')
         now = timezone.now()
@@ -25,18 +25,19 @@ class UserManager(BaseUserManager):
             adress1=adress1,
             adress2=adress2,
             dateNaiss=dateNaiss,
-            fidelity=fidelity
+            fidelity=fidelity,
+            phone=phone
         )
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_user(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity):
+    def create_user(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity, phone):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
-                                 dateNaiss, fidelity)
+                                 dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity):
-        user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity)
+    def create_superuser(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity, phone):
+        user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity, phone)
         return user
 
 
@@ -55,10 +56,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     adress2 = models.CharField(max_length=254, null=True, blank=True)
     dateNaiss = models.DateField(null=True, blank=True)
     fidelity = models.IntegerField(null=True, blank=True)
+    phone = models.CharField(max_length=16, null=True, blank=True)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['name', 'forename', 'adress1', 'adress2', 'dateNaiss']
+    REQUIRED_FIELDS = ['name', 'forename', 'adress1', 'adress2', 'dateNaiss', 'phone']
 
     objects = UserManager()
 
