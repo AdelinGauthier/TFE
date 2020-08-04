@@ -21,6 +21,7 @@ Vitrine
 Interface client
 - Voir historique de ses soins passés et futurs
 - Voir dépenses faites et bonus de fidélité
+- Changement de mot de passe et autres données
 
 Interface administrateur
 - Ajouter sujet dans le blog (Sujets à gauche, article sur le reste de l'écran, 2 typos, couleurs, ...)

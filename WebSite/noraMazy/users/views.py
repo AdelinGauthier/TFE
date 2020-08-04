@@ -30,3 +30,9 @@ def signup(request):
 
 
 from django.shortcuts import render
+
+
+def name(request):
+    username = None
+    if request.user.is_authenticated:
+        username = request.user.username

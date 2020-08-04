@@ -22,15 +22,26 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+	border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
 }
 
 body, html {
 	height: 100%;
 	font-family: Ubuntu-Regular, sans-serif;
 }
+
+
+
+.loginForm {
+  border-radius: 30%;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+
 
 /*---------------------------------------------*/
 a {
