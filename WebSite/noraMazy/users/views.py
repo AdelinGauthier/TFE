@@ -3,6 +3,8 @@ from django.contrib.auth import login, authenticate
 from django.views.generic.detail import DetailView
 
 from .forms import SignUpForm
+from .forms import EditProfileForm
+from django.urls import reverse
 
 
 class UserView(DetailView):
@@ -32,7 +34,14 @@ def signup(request):
 from django.shortcuts import render
 
 
-def name(request):
-    username = None
-    if request.user.is_authenticated:
-        username = request.user.username
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('users:profile'))
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'edit_profile.html', args)

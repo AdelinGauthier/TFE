@@ -3,8 +3,7 @@
 <head>
 
     {% load static %}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static "css/profile.css"%}">
 
 </head>
@@ -21,8 +20,6 @@
 </div>
 <!-- nav-right -->
 <main>
-
-
   <nav>
     <div class="nav-right hidden-xs">
       <div class="button" id="btn">
@@ -41,7 +38,16 @@
 
       <section>
     <article>
-       <h4>Section 1</h4>
+       <h4>Hello {{ user.forename }}</h4>
+        <p>Here is you data :</p>
+        <p>Username : {{ user.forename }}</p>
+        <p>name : {{ user.name }}</p>
+        <p>email : {{ user }}</p>
+        <p>Adresse : {{ user.adress1 }}  {{ user.adress2 }}</p>
+        <p>Date de naissance : {{ user.dateNaiss }}</p>
+        <p>Mes points de fidelité : {{ user.fidelity }}</p>
+        <br>
+        <button type="submit"> <a href="{% url 'users:edit_profile' %}" class="nav-link">Changer mes informations</a></button>
     </article>
   </section>
 
@@ -75,9 +81,6 @@
     <li class="sidebar-item"><a href="#" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
   </ul>
 </div>
-
-
-
 
 <script src="{% static "js/profile.js" %}"></script>
 </body>

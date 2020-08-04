@@ -267,3 +267,10 @@ section {
     margin: auto;
     display: none;
 }
+
+article {
+  margin: auto;
+  text-align: center;
+}
+
+

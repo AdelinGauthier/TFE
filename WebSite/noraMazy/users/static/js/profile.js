@@ -22,6 +22,6 @@ $(document).ready(function() {
 (function($) {
   $('div li a').click(function() {
     $(this).addClass('active').siblings('a').removeClass('active');
-    $('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');
+    $('section:nth-of-type('+$(this).data('rel')+')').stop().show(1).siblings('section').stop().hide(1);
   });
 })(jQuery);
