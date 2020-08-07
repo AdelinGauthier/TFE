@@ -1,14 +1,17 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.contrib.auth import login, authenticate
 from django.views.generic.detail import DetailView
 
 from .forms import SignUpForm
+from soins.forms import SoinsSelectForm
 from .forms import EditProfileForm
+
 from django.urls import reverse
 
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 
+from django.shortcuts import render
 
 class UserView(DetailView):
     template_name = 'users/profile.html'
@@ -32,9 +35,6 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
-
-
-from django.shortcuts import render
 
 
 def edit_profile(request):
@@ -65,3 +65,13 @@ def change_password(request):
 
         args = {'form': form}
         return render(request, 'change_password.html', args)
+
+
+def CreateSoinsSelect(request):
+    if request.method == 'POST':
+        form = SoinsSelectForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+    else:
+        form = SoinsSelectForm()
+    return render(request, 'templates/profile.html', {'form': form})

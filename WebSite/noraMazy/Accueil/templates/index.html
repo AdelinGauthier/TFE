@@ -40,14 +40,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Nora Mazy</a>
+	      <a class="navbar-brand" href="{% url 'Accueil' %}">Nora Mazy</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Accueil</a></li>
+	          <li class="nav-item active"><a href="{% url 'Accueil' %}" class="nav-link">Accueil</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 
 
@@ -76,46 +76,6 @@
 	  </nav>
     <!-- END nav -->
 
-<!-- Connection button -->
-
-			
-<!--
-			  <div id="connexion," class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">				
-				<h4 class="modal-title">Connexion</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
-				<form action="../Connected/" method="post">
-					<div class="form-group">
-						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" placeholder="Adresse mail" required="required">
-					</div>
-					<div class="form-group">
-						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" placeholder="Mot de passe" required="required">					
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-					</div>
-					<div class="form-group">
-						<input type="button" class="btn btn-primary btn-block btn-lg" data-dismiss="modal" data-toggle="modal" data-target="Connexion.html" value="Créer un compte" onclick="location.href = 'Connexion/';">
-					</div>
-				</form>				
-				
-			</div>
-			<div class="modal-footer">
-				<a href="#">Forgot Password?</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-//-->
-
-
 
 
 		
@@ -133,14 +93,87 @@
       </div>
     </div>
 
+
+
+
+
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big">Les soins</h1>
+            <h2 class="mb-4">Les soins</h2>
+          </div>
+        </div>
+    	</div>
+    	<div class="container-fluid">
+    		<div class="row">
+
+
+
+
+
+<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">BrowLift</h2>
+      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">LashLift</h2>
+      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Extensions Cils</h2>
+      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Henna Brow</h2>
+      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+    <div class="card">
+    <div class="content">
+      <h2 class="title">Suppléments</h2>
+      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+</main>
+
+            </div>
+            </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
     <div class="goto-here"></div>
     
     <section class="ftco-section ftco-product">
     	<div class="container">
     		<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big">Les soins</h1>
-            <h2 class="mb-4">Les soins</h2>
+          	<h1 class="big">Gallerie</h1>
+            <h2 class="mb-4">Gallerie</h2>
           </div>
         </div>
     		<div class="row">
@@ -235,52 +268,7 @@
     </section>
 
 
-    <section class="ftco-section bg-light">
-    	<div class="container">
-				<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big">Gallerie</h1>
-            <h2 class="mb-4">Gallerie</h2>
-          </div>
-        </div>    		
-    	</div>
-    	<div class="container-fluid">
-    		<div class="row">
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/product-1.jpg" %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/product-2.jpg" %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/product-3.jpg" %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/product-4.jpg" %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+
 		
 		<section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">

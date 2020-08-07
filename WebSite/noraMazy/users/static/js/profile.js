@@ -15,7 +15,6 @@ $(document).ready(function() {
       toggleSidebar();
     }
   });
-
 });
 
 
@@ -25,3 +24,9 @@ $(document).ready(function() {
     $('section:nth-of-type('+$(this).data('rel')+')').stop().show(1).siblings('section').stop().hide(1);
   });
 })(jQuery);
+
+
+function test() {
+  var x = document.getElementById("compteCache");
+    x.style.display = "none";
+}

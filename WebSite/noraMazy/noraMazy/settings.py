@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Accueil.apps.AccueilConfig',
     'crispy_forms',
     'users',
+    'soins',
 ]
 
 AUTH_USER_MODEL = 'users.User'
