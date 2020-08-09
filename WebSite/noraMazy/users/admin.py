@@ -6,13 +6,12 @@ from .models import User
 
 class UserAdmin(BaseUserAdmin):
     fieldsets = (
-        (None, {'fields': ('email', 'password', 'name', 'last_login')}),
-        ('Permissions', {'fields': (
-            'is_active',
-            'is_staff',
-            'is_superuser',
-            'groups',
-            'user_permissions',
+        (None, {'fields': ('email', 'name', 'last_login', 'phone', 'adress1', 'adress2')}),
+        ('Infos Personnelles', {'fields': (
+            'story',
+            'historique',
+            'fidelity',
+
         )}),
     )
     add_fieldsets = (
@@ -25,13 +24,11 @@ class UserAdmin(BaseUserAdmin):
         ),
     )
 
-    list_display = ('email', 'name', 'is_staff', 'last_login', 'story', 'name', 'forename', 'historique', 'adress1', 'adress2', 'dateNaiss', 'fidelity')
-    list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups', 'story', 'name', 'forename', 'historique', 'adress1', 'adress2', 'dateNaiss', 'fidelity')
+    list_display = ('is_staff', 'email', 'name', 'forename', 'adress1', 'adress2', 'dateNaiss', 'last_login')
+    list_filter = ('is_superuser', 'forename')
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ('groups', 'user_permissions',)
-
-
 
 
 

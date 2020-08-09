@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Promo
 
-# Register your models here.
+class AccueilPromo(admin.ModelAdmin):
+    list = 'photoPromo'
+
+
+admin.site.register(Promo, AccueilPromo)

@@ -21,7 +21,7 @@
 <!-- nav-right -->
 
 {% load static %}
-<main style="background-image: url({% static "images/NoraMazy.jpg"%}); background-repeat: no-repeat; background-size: cover;">
+<main style="background-color: antiquewhite; background-repeat: no-repeat; background-size: cover;">
   <nav>
     <div class="nav-right hidden-xs">
       <div class="button" id="btn">
@@ -122,13 +122,8 @@
     <article>
       <h4>Faites votre réservation</h4>
         <form action="#" method="post">
-    {% csrf_token %}
-    {% for field in form %}
-    <div class="fieldWrapper">
-        {{ field.errors }}
-        {{ field }}
-    </div>
-{% endfor %}
+            {% csrf_token %}
+            {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
     </article>
@@ -153,8 +148,8 @@
   <ul class="sidebar-list">
       <li class="sidebar-item"><a href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
     <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="1" class="active">Mon compte</a></li>
-    <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
-    <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
     <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
   </ul>
 </div>

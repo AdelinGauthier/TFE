@@ -479,7 +479,7 @@ pre {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #f9dcc4; }
+  background-color: #fff; }
 
 .row {
   display: -webkit-box;
@@ -8339,7 +8339,7 @@ textarea.form-control {
     box-shadow: 0 0 0 0 rgba(241, 184, 196, 0); } }
 
 .heading-section {
-  position: relative; }
+  position: relative;}
   .heading-section .subheading {
     font-size: 14px;
     display: block;
@@ -9203,19 +9203,19 @@ textarea.form-control {
 
 
 .card:nth-child(1):before {
-  background-image: url('../images/soin1.jpg');
+  background-image: url('../images/browlift.jpg');
 }
 .card:nth-child(2):before {
-  background-image: url('../images/soin1.jpg');
+  background-image: url('../images/lashlift.jpg');
 }
 .card:nth-child(3):before {
-  background-image: url('../images/soin1.jpg');
+  background-image: url('../images/extention.jpg');
 }
 .card:nth-child(4):before {
-  background-image: url('../images/soin1.jpg');
+  background-image: url('../images/henna.jpg');
 }
 .card:nth-child(5):before {
-  background-image: url('../images/soin1.jpg');
+  background-image: url('../images/supplement.jpg');
 }
 
 .content {
@@ -9327,6 +9327,93 @@ textarea.form-control {
     -webkit-transition-duration: 0s;
             transition-duration: 0s;
   }
+}
+
+
+
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483645;
+  box-sizing: border-box;
+  width: 100%;
+
+  background-color: rgba(241, 246, 244, 0.7);
+}
+
+.cookie-consent-banner__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.cookie-consent-banner__copy {
+  margin-bottom: 16px;
+}
+
+.cookie-consent-banner__actions {
+}
+
+.cookie-consent-banner__header {
+  margin-bottom: 8px;
+
+  font-family: "CeraPRO-Bold", sans-serif, arial;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cookie-consent-banner__description {
+  font-family: "CeraPRO-Regular", sans-serif, arial;
+  font-weight: normal;
+  color: #54595c;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cookie-consent-banner__cta {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 164px;
+  padding: 11px 13px;
+  border-radius: 2px;
+
+  background-color: #f9dcc4;
+
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  font-family: "CeraPRO-Regular", sans-serif, arial;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cookie-consent-banner__cta--secondary {
+  padding: 9px 13px;
+
+  border: 2px solid #3A4649;
+
+  background-color: transparent;
+
+  color: #f9dcc4;
+}
+
+.cookie-consent-banner__cta:hover {
+  background-color: #e8c2a2
+}
+
+.cookie-consent-banner__cta--secondary:hover {
+  border-color: #e8c2a2;
+
+  background-color: transparent;
+
+  color: #f9dcc4;
+}
+
+.cookie-consent-banner__cta:last-child {
+  margin-left: 16px;
 }
 
 

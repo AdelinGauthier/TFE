@@ -315,3 +315,10 @@
 
 })(jQuery);
 
+
+
+function cookiesAccept() {
+	var x = document.getElementById("myCookies");
+	x.style.display = "none";
+}
+

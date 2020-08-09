@@ -13,6 +13,9 @@ from django.contrib.auth import update_session_auth_hash
 
 from django.shortcuts import render
 
+from django.core.mail import send_mail
+
+
 class UserView(DetailView):
     template_name = 'users/profile.html'
 
@@ -69,9 +72,34 @@ def change_password(request):
 
 def CreateSoinsSelect(request):
     if request.method == 'POST':
-        form = SoinsSelectForm(request.POST, instance=request.user)
+        form = SoinsSelectForm(request.POST)
         if form.is_valid():
             form.save()
+            msg = 'Salut Nora, serait-il possible de réserver les soins suivants : \n'
+            soins = ''
+            test = ''
+            jour = ''
+            for item in form:
+                test += str(item.value())
+                if item.name == 'date':
+                    jour = item.value()
+                else:
+                    if item.value():
+                        soins += '- ' + item.label + ', \n'
+            msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
+            msg += 'Commentaire additionnel : \n' + '\n' + '\n'
+
+            msg += request.user.forename + '\n'
+            msg += request.user.name + '\n'
+            msg += request.user.phone + '\n'
+            msg += request.user.adress1 + ' ' + request.user.adress2 + '\n' + '\n'
+            msg += 'Merci beaucoup ! Des bisous partout partout'
+            send_mail('Réservation de soins', msg, request.user.email,
+                      ['mazy.nora@hotmail.com'], fail_silently=False)
     else:
         form = SoinsSelectForm()
-    return render(request, 'templates/profile.html', {'form': form})
+    return render(request, 'profileRes.html', {'form': form})
+
+
+def MesReserv(request):
+    return render(request, 'mesReserv.html')

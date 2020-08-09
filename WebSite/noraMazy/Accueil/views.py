@@ -1,8 +1,12 @@
-from django.http import HttpResponse
-from django.template import Context, loader
-
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from .models import Promo
 
 
 def index(request):
-    return render(request, 'index.html')
+    promo = Promo
+    context = {'promo': promo}
+    return render(request, 'index.html', context)
+
+
+def contact(request):
+    return render(request, 'contact.html')

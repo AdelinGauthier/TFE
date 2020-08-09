@@ -44,8 +44,6 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'users.User'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -84,8 +82,6 @@ WSGI_APPLICATION = 'noraMazy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
-CRISPY_TEMPLATE_PACK="bootstrap4"
 
 DATABASES = {
     'default': {
@@ -133,10 +129,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Accueil/media').replace('\\', '/')
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.live.com'
+EMAIL_HOST_USER = "a2l195@hotmail.fr"
+EMAIL_HOST_PASSWORD = 'adelin975'
+EMAIL_PORT = '587'

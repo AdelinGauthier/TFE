@@ -1,4 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.forms import ModelForm
+
 from .models import User
 from django import forms
 
@@ -40,5 +42,3 @@ class EditProfileForm(UserChangeForm):
             'adress2': 'Adresse 2',
             'phone': 'N° téléphone',
         }
-
-
