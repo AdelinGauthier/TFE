@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from .models import User
+from .models import User, Image
 
 
 class UserAdmin(BaseUserAdmin):
@@ -10,8 +10,8 @@ class UserAdmin(BaseUserAdmin):
         ('Infos Personnelles', {'fields': (
             'story',
             'historique',
+            'soins',
             'fidelity',
-
         )}),
     )
     add_fieldsets = (
@@ -31,5 +31,14 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ('groups', 'user_permissions',)
 
 
+class ImageInline(admin.TabularInline):
+    model = Image
 
+class PostAdmin(admin.ModelAdmin):
+    inlines = [
+        ImageInline,
+    ]
+
+
+admin.site.register(Image, PostAdmin)
 admin.site.register(User, UserAdmin)

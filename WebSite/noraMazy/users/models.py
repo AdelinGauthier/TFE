@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.utils import timezone
+from soins.models import SoinsSelect
 
 
 class UserManager(BaseUserManager):
@@ -60,6 +61,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     dateNaiss = models.DateField(null=True, blank=True)
     fidelity = models.IntegerField(null=True, blank=True, editable=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
+    soins = models.TextField(blank=True)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
@@ -69,3 +71,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_absolute_url(self):
         return "/users/%i/" % (self.pk)
+
+
+
+class Post(models.Model):
+    image = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=50)
+
+class Image(models.Model):
+    image = models.ForeignKey(Post, on_delete=models.CASCADE)
