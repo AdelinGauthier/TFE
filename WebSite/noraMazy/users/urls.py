@@ -2,7 +2,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
 
-from .views import UserView, signup, CreateSoinsSelect, MesReserv
+from .views import UserView, signup, CreateSoinsSelect, MesReserv, Histo, MerciRes
 from . import views
 
 app_name = 'users'
@@ -15,5 +15,8 @@ urlpatterns = [
     path('profile/password/', views.change_password, name='change_password'),
     path('signup/', signup, name='signup'),
     path('profile/reservation', CreateSoinsSelect, name="reservation"),
-    path('profile/Mes_reservation', MesReserv, name="mesReserv"),
+    path('profile/Mes_reservation', MesReserv.as_view(), name="mesReserv"),
+    path('profile/Mon_historique', Histo.as_view(), name="monHisto"),
+    path('profile/merci', views.MerciRes, name="merci"),
+
 ]

@@ -21,7 +21,7 @@
 <!-- nav-right -->
 
 {% load static %}
-<main style="background-color: antiquewhite; background-repeat: no-repeat; background-size: cover;">
+<main style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
   <nav>
     <div class="nav-right hidden-xs">
       <div class="button" id="btn">
@@ -40,7 +40,12 @@
 
     <div id="compteCache" class="compteAff">
         <article>
-            {{ user.soins }}
+            {% for object in object_list %}
+
+               <p>{{ object.HistoriqueDesSoins }} - {{ object.Date }}</p>
+                <br>
+
+            {% endfor %}
         </article>
   </div>
 </main>
@@ -50,11 +55,11 @@
       <li class="sidebar-item"><a href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
     <li class="sidebar-item"><a href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor" data-rel="1" class="active">Mon compte</a></li>
     <li class="sidebar-item"><a href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
-    <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
-    <li class="sidebar-item"><a href="#" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:monHisto' %}" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
   </ul>
 </div>
 
 <script src="{% static "js/profile.js" %}"></script>
 </body>
-</html>
+</html>>

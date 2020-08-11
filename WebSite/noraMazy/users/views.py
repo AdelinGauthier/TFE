@@ -1,7 +1,10 @@
 from django.shortcuts import redirect
 from django.contrib.auth import login, authenticate
+from django.views import View
+from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
+from . import models
 from .forms import SignUpForm
 from soins.forms import SoinsSelectForm
 from .forms import EditProfileForm
@@ -15,9 +18,18 @@ from django.shortcuts import render
 
 from django.core.mail import send_mail
 
+from .models import SoinsList, Historique
+
 
 class UserView(DetailView):
     template_name = 'users/profile.html'
+
+    def get_object(self):
+        return self.request.user
+
+
+class MerciRes(DetailView):
+    template_name = 'users/merciReserv.html'
 
     def get_object(self):
         return self.request.user
@@ -101,5 +113,9 @@ def CreateSoinsSelect(request):
     return render(request, 'profileRes.html', {'form': form})
 
 
-def MesReserv(request):
-    return render(request, 'mesReserv.html')
+class MesReserv(ListView):
+    model = SoinsList
+
+
+class Histo(ListView):
+    model = Historique

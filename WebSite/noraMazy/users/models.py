@@ -55,13 +55,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(auto_now_add=True)
     story = models.TextField(blank=True)
     forename = models.CharField(max_length=254, null=True, blank=True)
-    historique = models.TextField(blank=True)
     adress1 = models.CharField(max_length=254, null=True, blank=True)
     adress2 = models.CharField(max_length=254, null=True, blank=True)
     dateNaiss = models.DateField(null=True, blank=True)
     fidelity = models.IntegerField(null=True, blank=True, editable=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
-    soins = models.TextField(blank=True)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
@@ -73,10 +71,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         return "/users/%i/" % (self.pk)
 
 
+class SoinsList(models.Model):
+    soin = models.ForeignKey(User, on_delete=models.CASCADE)
+    liste = models.CharField(blank=True, max_length=254)
+    Date = models.DateTimeField(null=True, blank=True)
 
-class Post(models.Model):
-    image = models.ImageField(upload_to='images/')
-    title = models.CharField(max_length=50)
 
-class Image(models.Model):
-    image = models.ForeignKey(Post, on_delete=models.CASCADE)
+class Historique(models.Model):
+    historique = models.ForeignKey(User, on_delete=models.CASCADE)
+    HistoriqueDesSoins = models.CharField(blank=True, max_length=254)
+    Date = models.DateField(null=True, blank=True)

@@ -10,3 +10,7 @@ def index(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def tarifs(request):
+    return render(request, 'tarifs.html')

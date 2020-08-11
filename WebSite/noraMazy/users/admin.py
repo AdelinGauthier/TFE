@@ -1,16 +1,24 @@
 from django.contrib import admin
+from django.contrib.admin.options import InlineModelAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from .models import User, Image
+from .models import User, SoinsList, Historique
+
+
+class SoinsAdmin(admin.TabularInline):
+    model = SoinsList
+
+
+class HistoriqueAdmin(admin.TabularInline):
+    model = Historique
 
 
 class UserAdmin(BaseUserAdmin):
+    inlines = [SoinsAdmin, HistoriqueAdmin]
     fieldsets = (
-        (None, {'fields': ('email', 'name', 'last_login', 'phone', 'adress1', 'adress2')}),
+        (None, {'fields': ('email', 'name', 'last_login', 'phone', ('adress1', 'adress2'))}),
         ('Infos Personnelles', {'fields': (
             'story',
-            'historique',
-            'soins',
             'fidelity',
         )}),
     )
@@ -31,14 +39,4 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ('groups', 'user_permissions',)
 
 
-class ImageInline(admin.TabularInline):
-    model = Image
-
-class PostAdmin(admin.ModelAdmin):
-    inlines = [
-        ImageInline,
-    ]
-
-
-admin.site.register(Image, PostAdmin)
 admin.site.register(User, UserAdmin)

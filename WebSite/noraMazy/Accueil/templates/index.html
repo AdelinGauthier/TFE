@@ -48,13 +48,15 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{% url 'Accueil' %}" class="nav-link">Accueil</a></li>
-	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+
 
 
               {% if user.is_authenticated %}
                 <li class="nav-item"><a href="{% url 'users:profile' %}" class="nav-link">Mon compte</a></li>
 			  {% endif %}
 
+            <li class="nav-item"><a href="{% url 'tarifs' %}" class="nav-link">Tarifs</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
 
                 {% if not user.is_authenticated %}
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Connexion &nbsp <i class='fas fa-user'>&nbsp</i></a>
@@ -182,83 +184,32 @@
     					<div class="item">
 		    				<div class="product">
 		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/epilation.jpg" %}" alt="Colorlib Template">
-		    						<span class="status">30%</span>
 		    					</a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Browlift</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-			    							<p class="price"><span class="mr-2 price-dc">120.00€</span><span class="price-sale">80.00€</span></p>
-			    						</div>
-		    						</div>
-		    					</div>
 		    				</div>
 	    				</div>
 	    				<div class="item">
 		    				<div class="product">
 		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/epilation.jpg" %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Lashlift</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>120.00€</span></p>
-				    					</div>
-			    					</div>
-		    					</div>
 		    				</div>
 	    				</div>
 	    				<div class="item">
 		    				<div class="product">
 		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/epilation.jpg" %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Epilation</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>120.00€</span></p>
-				    					</div>
-			    					</div>
-		    					</div>
 		    				</div>
 	    				</div>
 	    				<div class="item">
 		    				<div class="product">
 		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static "images/epilation.jpg" %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Soin 4</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>120.00€</span></p>
-				    					</div>
-			    					</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img src="{% static "images/epilation.jpg" %}" alt="Colorlib Template">
-			    					<span class="status">30%</span>
-			    				</a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Soin 5</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-			    							<p class="price"><span class="mr-2 price-dc">120.00€</span><span class="price-sale">80.00€</span></p>
-			    						</div>
-		    						</div>
-		    					</div>
 		    				</div>
 	    				</div>
 	    				<div class="item">
 		    				<div class="product">
 		    					<a href="#" class="img-prod"><img src="{% static "images/epilation.jpg" %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Soin 6</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>120.00€</span></p>
-				    					</div>
-			    					</div>
-		    					</div>
+		    				</div>
+	    				</div>
+	    				<div class="item">
+		    				<div class="product">
+		    					<a href="#" class="img-prod"><img src="{% static "images/epilation.jpg" %}" alt="Colorlib Template"></a>
 		    				</div>
 	    				</div>
     				</div>

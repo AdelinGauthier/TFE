@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class SoinsSelect(models.Model):
-    extensionsCils = models.BooleanField(default=False, verbose_name='ExtentionsCils')
+    extensionsCils = models.BooleanField(default=False)
     lashLift = models.BooleanField(default=False)
     lashLiftTeinture = models.BooleanField(default=False)
     browLift = models.BooleanField(default=False)
