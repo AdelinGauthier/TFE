@@ -4,7 +4,7 @@
 
     {% load static %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static "css/reserv/profile.css"%}">
+    <link rel="stylesheet" href="{% static "css/profile.css"%}">
     <link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/normalize.css" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/demo.css" %}" />
@@ -27,7 +27,23 @@
 
 {% load static %}
 <main style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
-  <h1>Merci pour votre réservation</h1>
+    <nav>
+    <div class="nav-right hidden-xs">
+      <div class="button" id="btn">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
+    </div>
+    <!-- nav-right -->
+  </nav>
+
+  <a href="https://codepen.io/tonkec/" class="ua" target="_blank">
+    <i class="fa fa-user"></i>
+  </a>
+  <h1 class="merciTemp">Merci pour votre réservation !</h1>
+    <h3 class="merciTemp">Votre demande a bien été prise en compte. Vous recevrez une réponse dans les prochaines 48h (jours ouvrables) par mail ou par téléphone.</h3>
+    <h4 class="merciTemp">Veuillez vérifier régulièrement votre boite mail</h4>
 </main>
 
 <div class="sidebar">

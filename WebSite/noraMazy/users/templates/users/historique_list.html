@@ -39,13 +39,21 @@
 
 
     <div id="compteCache" class="compteAff">
+    <h4 class="helloUser">Mon historique</h4>
         <article>
+        {% load i18n %}
+        {% language 'fr' %}
             {% for object in object_list %}
-
-               <p>{{ object.HistoriqueDesSoins }} - {{ object.Date }}</p>
-                <br>
-
+                <div class="container">
+              <ul class="responsive-table">
+                <li class="table-row">
+                  <div class="col col-5" data-label="Job Id">{{ object.HistoriqueDesSoins }}</div>
+                  <div class="col col-1" data-label="Customer Name">{{ object.Date }}</div>
+                </li>
+              </ul>
+                </div>
             {% endfor %}
+        {% endlanguage %}
         </article>
   </div>
 </main>

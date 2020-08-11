@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.contrib.auth import login, authenticate
 from django.views import View
@@ -28,11 +29,8 @@ class UserView(DetailView):
         return self.request.user
 
 
-class MerciRes(DetailView):
-    template_name = 'users/merciReserv.html'
-
-    def get_object(self):
-        return self.request.user
+def MerciRes(request):
+    return render(request, 'merciReserv.html')
 
 
 def signup(request):
@@ -108,6 +106,7 @@ def CreateSoinsSelect(request):
             msg += 'Merci beaucoup ! Des bisous partout partout'
             send_mail('Réservation de soins', msg, request.user.email,
                       ['mazy.nora@hotmail.com'], fail_silently=False)
+            return HttpResponseRedirect('merci')
     else:
         form = SoinsSelectForm()
     return render(request, 'profileRes.html', {'form': form})

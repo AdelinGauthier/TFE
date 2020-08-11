@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nora Mazy - Tarifs</title>
-     {% load static %}
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+<title>tarifs</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static "css/tarifs/tarifs.css" %}">
 </head>
-<body class="tarifsBackground">
 
-<div class="custom-accordion">
-  <div class="item">
-    <div class="icon">Lash Extensions</div>
-    <div class="title">
-      <div class="text">75.00 €</div>
+<body style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+	      <a class="navbar-brand" href="{% url 'Accueil' %}">Nora Mazy</a>
+	      </button>
     </div>
-    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolor repellendus quidem! Alias voluptatum enim eius id illum accusamus ut amet rerum delectus</div>
-  </div>
-  <div class="item">
-    <div class="icon">Lashlift</div>
-    <div class="title">
-      <div class="text">65.00 €</div>
-    </div>
-    <div class="content">Porro explicabo ad molestiae incidunt, corporis doloribus, numquam assumenda molestias deserunt provident veritatis</div>
-  </div>
-  <div class="item">
-    <div class="icon">Browlift</div>
-    <div class="title">
-      <div class="text">50.00 €</div>
-    </div>
-    <div class="content">Repudiandae non ea nam sint accusamus provident aut nobis excepturi, possimus animi corrupti debitis porro</div>
-  </div>
-  <div class="item">
-    <div class="icon">Henna Brows</div>
-    <div class="title">
-      <div class="text">35.00 €</div>
-    </div>
-    <div class="content">Cum repellendus, aspernatur error eos autem porro asperiores praesentium quae odit est fugiat suscipit commodi architecto doloribus</div>
-  </div>
-  <div class="item">
-    <div class="icon">Cure 3D Filler</div>
-    <div class="title">
-      <div class="text">25.00 €</div>
-    </div>
-    <div class="content">Laudantium vero ab atque natus et similique? Perferendis unde a voluptates voluptas tempora quaerat</div>
-  </div>
-  <div class="item">
-    <div class="icon">Teinture Sourcils</div>
-    <div class="title">
-      <div class="text">15.00 €</div>
-    </div>
-    <div class="content">Officiis ipsa suscipit, quidem odio, ratione sapiente consectetur nemo voluptatum maxime</div>
-  </div>
-    <div class="item">
-    <div class="icon">Teinture Cils</div>
-    <div class="title">
-      <div class="text">10.00 €</div>
-    </div>
-    <div class="content">Officiis ipsa suscipit, quidem odio, ratione sapiente consectetur nemo voluptatum maxime</div>
-  </div>
-  <div class="item" onclick="{{ Accueil }}">
-    <div class="icon"><a href="{% url 'Accueil' %}">Accueil</a></div>
-
-    <div class="title"></div>
-    <div class="content">
-      <div class="heart-icon">&hearts;</div>
-    </div>
-  </div>
-</div>
+<section>
+  <h4 class="helloUser">Tarifs</h4>
+  <details>
+    <summary>Lash Extensions</summary>
+    <p>Technique One by One <br>Prix variable: retouche/pose complète</p>
+    <p>30.00€ - 75.00€</p>
+  </details>
+  <details>
+    <summary>Lashlift</summary>
+    <p>Soin 3D Filler compris <br>Prix variable: supplément coloration </p>
+    <p>55.00€ - 65.00€</p>
+  </details>
+  <details>
+    <summary>Browlift</summary>
+    <p>Epilation comprise <br>Prix variable: supplément 3D Filler, coloration</p>
+    <p>40.00€ - 55.00€</p>
+  </details>
+  <details>
+    <summary>Henna Brows</summary>
+    <p>Epilation comprises</p>
+    <p>35.00€</p>
+  </details>
+  <details>
+    <summary>Cure 3D Filler</summary>
+    <p></p>
+    <p>20.00€</p>
+  </details>
+  <details>
+    <summary>Teinture Sourcils</summary>
+    <p>Epilation comprise</p>
+    <p>15.00€</p>
+  </details>
+  <details>
+    <summary>Teinture Cils</summary>
+    <p></p>
+    <p>10.00€</p>
+  </details>
+</section>
 </body>
-</html>

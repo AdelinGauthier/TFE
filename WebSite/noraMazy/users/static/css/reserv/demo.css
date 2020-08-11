@@ -11,7 +11,6 @@
 }
 
 body {
-	background: #fb887c;
 	color: #000;
 	font-family: 'Lato', Arial, sans-serif;
 }
@@ -117,4 +116,13 @@ section.related {
 		display: none;
 	}
 
+}
+
+#id_date{
+	margin-top: 1.5%;
+}
+
+.remarques{
+	margin-top: 5%;
+	text-align: center;
 }

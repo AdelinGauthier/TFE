@@ -38,15 +38,32 @@
   </a>
 
 
-    <div id="compteCache" class="compteAff">
-        <article>
-            {% for object in object_list %}
 
-               <p>{{ object.liste }} - {{ object.Date }}</p>
-                <br>
+    <div id="compteCache" class="compteAff">
+    <h4 class="helloUser">Mes réservations</h4>
+        <article>
+        {% load i18n %}
+        {% language 'fr' %}
+            {% for object in object_list %}
+                {% if object %}
+                    <div class="container">
+              <ul class="responsive-table">
+                <li class="table-row">
+                  <div class="col col-5" data-label="Job Id">{{ object.liste }}</div>
+                  <div class="col col-1" data-label="Customer Name">{{ object.Date|date:'d F Y'  }}</div>
+                </li>
+              </ul>
+
+                    {% else %}
+
+                    <h3 class="helloUser">Vous n'avez pas encore fait de réservation ou celle-ci n'a pas encore été acceptée</h3>
+
+                {% endif %}
+
+
 
             {% endfor %}
-
+            {% endlanguage %}
         </article>
   </div>
 </main>

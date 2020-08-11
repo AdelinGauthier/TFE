@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'users',
     'soins',
+    'bootstrap4',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -134,7 +135,9 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Accueil/media').replace('\\', '/')
 
-DATE_INPUT_FORMATS = ['%d-%m-%Y']
+DATE_INPUT_FORMATS = ['%d-%m-%Y'
+                      '%d/%m/%Y'
+                      '%d %m %Y']
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
