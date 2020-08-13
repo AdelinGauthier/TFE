@@ -24,7 +24,7 @@ SECRET_KEY = 'zc!&$ya-nhg(vwjy_qk@fdw+qmu9&_)md@r!!o06sczob)u&_8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['noramazy.com']
+ALLOWED_HOSTS = ['noramazy.herokuapp.com']
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
