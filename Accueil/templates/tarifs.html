@@ -1,0 +1,49 @@
+<head>
+<title>tarifs</title>
+{% load static %}
+    <link rel="stylesheet" href="{% static "css/tarifs/tarifs.css" %}">
+</head>
+
+<body style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+	      <a class="loginAccueil" href="{% url 'Accueil' %}">Accueil</a>
+    </div>
+<section>
+  <h4 class="helloUser">Tarifs</h4>
+  <details>
+    <summary>Lash Extensions</summary>
+    <p>Technique One by One <br>Prix variable: retouche/pose complète</p>
+    <p>30.00€ - 75.00€</p>
+  </details>
+  <details>
+    <summary>Lashlift</summary>
+    <p>Soin 3D Filler compris <br>Prix variable: supplément coloration </p>
+    <p>55.00€ - 65.00€</p>
+  </details>
+  <details>
+    <summary>Browlift</summary>
+    <p>Epilation comprise <br>Prix variable: supplément 3D Filler, coloration</p>
+    <p>40.00€ - 55.00€</p>
+  </details>
+  <details>
+    <summary>Henna Brows</summary>
+    <p>Epilation comprises</p>
+    <p>35.00€</p>
+  </details>
+  <details>
+    <summary>Cure 3D Filler</summary>
+    <p></p>
+    <p>20.00€</p>
+  </details>
+  <details>
+    <summary>Teinture Sourcils</summary>
+    <p>Epilation comprise</p>
+    <p>15.00€</p>
+  </details>
+  <details>
+    <summary>Teinture Cils</summary>
+    <p></p>
+    <p>10.00€</p>
+  </details>
+</section>
+</body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static "css/profile.css"%}">
+
+</head>
+<body>
+
+
+
+  <div class="nav-right visible-xs">
+  <div class="button" id="btn">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+  </div>
+</div>
+<!-- nav-right -->
+
+{% load static %}
+<main style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
+  <nav>
+    <div class="nav-right hidden-xs">
+      <div class="button" id="btn">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
+    </div>
+    <!-- nav-right -->
+  </nav>
+
+  <a href="https://codepen.io/tonkec/" class="ua" target="_blank">
+    <i class="fa fa-user"></i>
+  </a>
+
+
+
+    <div id="compteCache" class="compteAff">
+    <h4 class="helloUser">Mes réservations</h4>
+        <article>
+        {% load i18n %}
+        {% language 'fr' %}
+            {% for object in object_list %}
+                {% if object %}
+                    <div class="container">
+              <ul class="responsive-table">
+                <li class="table-row">
+                  <div class="col col-5" data-label="Job Id">{{ object.liste }}</div>
+                  <div class="col col-1" data-label="Customer Name">{{ object.Date|date:'d F Y'  }}</div>
+                </li>
+              </ul>
+
+                    {% else %}
+
+                    <h3 class="helloUser">Vous n'avez pas encore fait de réservation ou celle-ci n'a pas encore été acceptée</h3>
+
+                {% endif %}
+
+
+
+            {% endfor %}
+            {% endlanguage %}
+        </article>
+  </div>
+</main>
+
+<div class="sidebar">
+  <ul class="sidebar-list">
+      <li class="sidebar-item"><a href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor" data-rel="1" class="active">Mon compte</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:monHisto' %}" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
+  </ul>
+</div>
+
+<script src="{% static "js/profile.js" %}"></script>
+</body>
+</html>
