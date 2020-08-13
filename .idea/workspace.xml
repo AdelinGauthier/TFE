@@ -50,10 +50,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/users/static/js/main1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/css/reserv/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/css/reserv/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/static/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/static/css/owl.carousel.min.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597355066967</updated>
-      <workItem from="1597355069274" duration="4272000" />
+      <workItem from="1597355069274" duration="4475000" />
     </task>
     <servers />
   </component>
