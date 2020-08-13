@@ -30,8 +30,13 @@ ALLOWED_HOSTS = ['noramazy.herokuapp.com']
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
-
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
 # Extra places for collectstatic to find static files.
+
+
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
