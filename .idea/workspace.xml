@@ -50,8 +50,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noraMazy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/noraMazy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597355066967</updated>
-      <workItem from="1597355069274" duration="5615000" />
+      <workItem from="1597355069274" duration="5799000" />
     </task>
     <servers />
   </component>
