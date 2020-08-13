@@ -1,0 +1,76 @@
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+
+
+body, html {
+	height: 100%;
+	font-family: Ubuntu-Regular, sans-serif;
+    color: black;
+    background-attachment: fixed;
+}
+
+
+
+.loginForm {
+    color: black;
+  border-radius: 25%;
+  padding:15%;
+  background-color: rgba(245, 245, 245, 0.9);
+}
+.loginAccueil{
+    color:black;
+    text-align: center;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 200%;
+    margin-left: 2.5%;
+}
+
+.loginAccueil:hover{
+    color: #2e3133;
+}
+
+.loginForm1 {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 3%;
+    color: black;
+    padding: 3%;
+
+  border-radius: 8%;
+  background-color: rgba(245, 245, 245, 0.6);
+}
+
+.title{
+    text-align: center;
+    font-size: 400%;
+    background-color: rgba(245, 245, 245, 0.6);
+    padding: 0.5% 0%;
+}
+
+
+
+
+
+
