@@ -1,42 +1,38 @@
 {% load static %}
 <link rel="stylesheet" href="{% static "css/contact.css" %}">
 
-<a class="navbar-brand" href="{% url 'Accueil' %}">Nora Mazy</a>
+<a class="navbar-brand" href="{% url 'Accueil' %}">Accueil</a>
 
 
 <div id="form-main">
   <div id="form-div">
     <form class="form" id="form1" method="post">
 
+        {% load i18n %}
+            {% language 'fr' %}
+        {% csrf_token %}
 
 
-        {% if user.is_authenticated %}
       <p class="name">
-        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="{{ user.name }} {{ user.forename }}" />
+      {{ form.name.errors }}
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" value="{{ user.name }} {{ user.forename }}" /><label id="test" for="{{ form.name.id_for_label }}"></label>
       </p>
-            {% else %}
-            <p class="name">
-        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-      </p>
-        {% endif %}
 
 
-    {% if user.is_authenticated %}
       <p class="email">
-        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="{{ user }}" />
+      {{ form.email.errors }}
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" value="{{ user }}" /><label id="test" for="{{ form.email.id_for_label }}"></label>
       </p>
-{% else %}
-    <p class="email">
-        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-      </p>
-    {% endif %}
+
       <p class="text">
-        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Message"></textarea>
+      {{ form.msg.errors }}
+        {{ form.msg }}<label id="test" for="{{ form.msg.id_for_label }}"></label>
       </p>
 
       <div class="submit">
         <input type="submit" value="Envoyer" id="button-blue" />
         <div class="ease"></div>
+          {% endlanguage %}
       </div>
     </form>
   </div>

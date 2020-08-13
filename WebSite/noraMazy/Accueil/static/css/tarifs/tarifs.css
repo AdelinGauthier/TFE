@@ -92,3 +92,16 @@ h4 {
   font-size: 400%;
 }
 
+
+.loginAccueil{
+    color:black;
+    text-align: center;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 200%;
+    margin-left: 2.5%;
+}
+
+.loginAccueil:hover{
+    color: #2e3133;
+}
+

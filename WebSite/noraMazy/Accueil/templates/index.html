@@ -56,8 +56,9 @@
 			  {% endif %}
 
             <li class="nav-item"><a href="{% url 'tarifs' %}" class="nav-link">Tarifs</a></li>
+            {% if user.is_authenticated %}
                 <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-
+            {% endif %}
                 {% if not user.is_authenticated %}
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Connexion &nbsp <i class='fas fa-user'>&nbsp</i></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -85,8 +86,6 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-        	<h3 class="v">Petit</h3>
-        	<h3 class="vr">Slogan ???</h3>
           <div class="col-md-11 ftco-animate text-center">
             <h1>Nora Mazy</h1>
             <h2><span>Professional Care</span></h2>
@@ -120,36 +119,43 @@
   <div class="card">
     <div class="content">
       <h2 class="title">BrowLift</h2>
-      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
-      <button class="btn">View Trips</button>
+      <p class="copy">Le Browlift, est une restructuration qui consiste à densifier les sourcils en réhaussant les poils tout en fixant leur mouvement. Cette technique apportera ouverture et luminosité au regard. En option, une coloration classique ou l'Henna Brows accentueront davantage l'aspect fournis et volumineux ainsi que la restructuration de la forme du sourcil.
+<br>
+Durée du traitement: 1h - 1h30</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <h2 class="title">LashLift</h2>
-      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
-      <button class="btn">View Trips</button>
+      <p class="copy">Le Lashlift, également appelé réhaussement de cils, est une technique qui permet d’embellir le regard en donnant aux cils naturels une jolie courbure tout en conservant un aspect très subtil.
+Un soin 3D Filler est réalisé en complément afin d'épaissir le cil jusqu'à 40% en plus de sa nature.
+En option, une coloration noire des cils pour donner un effet plus intense. <br>
+
+Durée du traitement: 1h30</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
-      <h2 class="title">Extensions Cils</h2>
-      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
-      <button class="btn">Book Now</button>
+      <h2 class="title">Lash Extensions</h2>
+      <p class="copy">Technique One by One<br>
+
+Les extensions de cils permettent d'avoir des cils longs, denses et recourbés sans avoir à utiliser de mascara. Le choix des extensions peuvent varier en épaisseur, longueur et courbure pour un rendu du plus naturel au plus sophistiqué. Après avoir analyser ensemble vos attentes et les possibilités selon la nature de vos cils, le traitement consiste à placer délicatement une extension de cil sur chacun de vos cils naturels.
+<br>
+Durée du traitement: 2h</p>
     </div>
   </div>
   <div class="card">
     <div class="content">
       <h2 class="title">Henna Brows</h2>
-      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
-      <button class="btn">Book Now</button>
+      <p class="copy">L'Henna Brows est une restructuration du sourcil par la coloration. Le Henné colore le poil mais également la peau pour un effet "ombré" qui comble les petits trous/irrégularités du sourcil  donnant un aspect de densité. Cette technique permet également de redessiné la forme du sourcil et de lui donner un aspect plus fournis.
+<br>
+Durée du traitement: 1h</p>
     </div>
   </div>
     <div class="card">
     <div class="content">
       <h2 class="title">Suppléments</h2>
-      <p class="copy">bla bla bla je n'y connais rien du tout il faudra que vous me disiez quoi raconter</p>
-      <button class="btn">Book Now</button>
+      <p class="copy">Teinture cils/sourcils<br>Epilation sourcils<br>Cure 3D Filler</p>
     </div>
   </div>
 </main>
@@ -255,7 +261,6 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Nora Mazy</h2>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>

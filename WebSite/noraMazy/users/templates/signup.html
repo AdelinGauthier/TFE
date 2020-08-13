@@ -2,14 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Signup</title>
+    <title>Nora Mazy - Créer un compte</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
-<body>
-<h1>Sign up</h1>
+<body style="background-image: url({% static "images/NoraMazy.jpg"%}); background-repeat: no-repeat; background-size: cover;">
+
+
+
+<a class="loginAccueil" href="{% url 'Accueil' %}">Accueil</a>
+
+
+<div id="form-main">
+<h1 class="title">Je crée mon compte</h1>
+  <div class="loginForm1">
+
+
+
+{% load crispy_forms_filters %}
+
+{% load i18n %}
+            {% language 'fr' %}
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   <button type="submit">Sign up</button>
 </form>
+      {% endlanguage %}
+</div>
+</div>
+
 </body>
 </html>

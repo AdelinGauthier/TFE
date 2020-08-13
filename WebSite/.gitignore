@@ -1,3 +1,6 @@
 venv/
 noraMazy/secrets.json
-noraMazy/noraMazy/settings.py
+env/
+disquaire_project/__pycache__
+store/__pycache__/
+store/migrations/__pycache__/

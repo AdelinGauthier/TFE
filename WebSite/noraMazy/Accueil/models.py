@@ -15,3 +15,8 @@ class Promo(models.Model):
     def filename(self):
         return os.path.basename(self.photoPromo.name)
 
+
+class ContactFo(models.Model):
+    name = models.CharField(blank=True, max_length=254)
+    email = models.CharField(blank=True, max_length=254)
+    msg = models.TextField(null=True, blank=True)
