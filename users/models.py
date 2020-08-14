@@ -58,7 +58,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     adress1 = models.CharField(max_length=254, null=True, blank=True)
     adress2 = models.CharField(max_length=254, null=True, blank=True)
     dateNaiss = models.DateField(null=True, blank=True)
-    fidelity = models.IntegerField(null=True, blank=True, editable=True)
+    fidelity = models.IntegerField(null=True, blank=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
 
     USERNAME_FIELD = 'email'
