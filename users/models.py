@@ -18,15 +18,7 @@ class UserManager(BaseUserManager):
             is_superuser=is_superuser,
             last_login=now,
             date_joined=now,
-            story=story,
-            name=name,
-            forename=forename,
-            historique=historique,
-            adress1=adress1,
-            adress2=adress2,
-            dateNaiss=dateNaiss,
-            fidelity=fidelity,
-            phone=phone
+
         )
         user.set_password(password)
         user.save(using=self._db)
