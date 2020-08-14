@@ -38,8 +38,10 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password):
-        user = self._create_user(email, password, True, True)
+    def create_superuser(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss,
+                         fidelity, phone):
+        user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2,
+                                 dateNaiss, fidelity, phone)
         return user
 
 
@@ -61,7 +63,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['__all__']
+    REQUIRED_FIELDS = ['name', 'forename', 'adress1', 'adress2', 'dateNaiss', 'phone', 'fidelity', 'story', 'historique']
 
     objects = UserManager()
 
