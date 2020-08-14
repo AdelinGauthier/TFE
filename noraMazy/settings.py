@@ -37,12 +37,12 @@ STATIC_TMP = os.path.join(BASE_DIR, 'static')
 
 
 #STATICFILES_DIRS = (
-#    os.path.join(PROJECT_ROOT, 'static'),
+#    os.path.join(PROJECT_ROOT, python manage.py collectstatic'static'),
 #)
 
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATIC_URL = '/static/'
 
