@@ -6,8 +6,8 @@ from soins.models import SoinsSelect
 
 class UserManager(BaseUserManager):
 
-    def _create_user(self, email, password, is_staff, is_superuser, story, name, forename, historique, adress1, adress2,
-                     dateNaiss, fidelity, phone):
+    def _create_user(self, email, password, is_staff, is_superuser, name, forename, adress1, adress2,
+                     dateNaiss, phone):
         if not email:
             raise ValueError('Users must have an email address')
         now = timezone.now()
@@ -33,10 +33,8 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_user(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss, fidelity,
-                    phone):
-        return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
-                                 dateNaiss, fidelity, phone)
+    def create_user(self, email, password, story, name, forename, historique, adress1, adress2):
+        return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2)
 
     def create_superuser(self, email, password, name, forename, adress1, adress2, dateNaiss,
                          phone):
