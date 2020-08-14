@@ -22,12 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zc!&$ya-nhg(vwjy_qk@fdw+qmu9&_)md@r!!o06sczob)u&_8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-DEBUG_PROPAGATE_EXCEPTIONS = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['noramazy.herokuapp.com']
-
-
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
@@ -35,22 +32,18 @@ STATIC_TMP = os.path.join(BASE_DIR, 'static')
 # Extra places for collectstatic to find static files.
 
 
-
-#STATICFILES_DIRS = (
+# STATICFILES_DIRS = (
 #    os.path.join(PROJECT_ROOT, python manage.py collectstatic'static'),
-#)
+# )
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATIC_URL = '/static/'
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Accueil/media')
-
-
 
 # Application definition
 
@@ -125,6 +118,11 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -160,7 +158,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-
 DATE_INPUT_FORMATS = ['%d-%m-%Y'
                       '%d/%m/%Y'
                       '%d %m %Y']
@@ -174,3 +171,8 @@ EMAIL_HOST = 'smtp.live.com'
 EMAIL_HOST_USER = "a2l195@hotmail.fr"
 EMAIL_HOST_PASSWORD = 'adelin975'
 EMAIL_PORT = '587'
+
+
+
+import django_heroku
+django_heroku.settings(locals())
