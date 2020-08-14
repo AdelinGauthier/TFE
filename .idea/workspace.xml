@@ -50,12 +50,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TFE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TFE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
@@ -127,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597355066967</updated>
       <workItem from="1597355069274" duration="14676000" />
-      <workItem from="1597399571372" duration="416000" />
+      <workItem from="1597399571372" duration="1006000" />
     </task>
     <servers />
   </component>
