@@ -38,10 +38,8 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss,
-                         fidelity, phone):
-        user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2,
-                                 dateNaiss, fidelity, phone)
+    def create_superuser(self, email, password):
+        user = self._create_user(email, password, True, True)
         return user
 
 
@@ -63,7 +61,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['name', 'forename', 'adress1', 'adress2', 'dateNaiss', 'phone', 'fidelity', 'story', 'historique']
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
 
@@ -72,12 +70,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class SoinsList(models.Model):
-    soin = models.ForeignKey(User, on_delete=models.CASCADE)
+    soin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Soins')
     liste = models.CharField(blank=True, max_length=254)
     Date = models.DateTimeField(null=True, blank=True)
 
 
 class Historique(models.Model):
-    historique = models.ForeignKey(User, on_delete=models.CASCADE)
+    historique = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Historique')
     HistoriqueDesSoins = models.CharField(blank=True, max_length=254)
     Date = models.DateField(null=True, blank=True)
