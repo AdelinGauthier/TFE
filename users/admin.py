@@ -16,7 +16,7 @@ class HistoriqueAdmin(admin.TabularInline):
 class UserAdmin(BaseUserAdmin):
     inlines = [SoinsAdmin, HistoriqueAdmin]
     fieldsets = (
-        (None, {'fields': ('email', 'name', 'last_login', 'phone', ('adress1', 'adress2'))}),
+        (None, {'fields': ('email', 'name', 'last_login', 'phone', ('adress1', 'adress2'), 'dateNaiss')}),
         ('Infos Personnelles', {'fields': (
             'story',
             'fidelity',
