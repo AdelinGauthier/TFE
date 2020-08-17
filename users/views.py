@@ -106,7 +106,7 @@ def CreateSoinsSelect(request):
             msg += 'Merci beaucoup '
             send_mail('Réservation de soins', msg, request.User.email,
                       ['mazy.nora@hotmail.com'], fail_silently=False)
-            return HttpResponseRedirect('merci')
+            return redirect('merci')
     else:
         form = SoinsSelectForm()
     return render(request, 'profileRes.html', {'form': form})
