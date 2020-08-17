@@ -99,14 +99,14 @@ def CreateSoinsSelect(request):
             msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
             msg += 'Commentaire additionnel : \n' + '\n' + '\n'
 
-            msg += request.User.forename + '\n'
-            msg += request.User.name + '\n'
-            msg += request.User.phone + '\n'
-            msg += request.User.adress1 + ' ' + request.User.adress2 + '\n' + '\n'
+            msg += request.user.forename + '\n'
+            msg += request.user.name + '\n'
+            msg += request.user.phone + '\n'
+            msg += request.user.adress1 + ' ' + request.user.adress2 + '\n' + '\n'
             msg += 'Merci beaucoup '
-            send_mail('Réservation de soins', msg, request.User.email,
+            send_mail('Réservation de soins', msg, request.user.email,
                       ['a2l195@hotmail.fr'], fail_silently=False)
-            return redirect('merci')
+            return redirect('users:merci')
     else:
         form = SoinsSelectForm()
     return render(request, 'profileRes.html', {'form': form})

@@ -24,7 +24,7 @@ SECRET_KEY = 'zc!&$ya-nhg(vwjy_qk@fdw+qmu9&_)md@r!!o06sczob)u&_8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['noramazy.herokuapp.com']
+ALLOWED_HOSTS = ['noramazy.com']
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
@@ -42,8 +42,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'Accueil/media')
+MEDIA_URL = 'Accueil/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Accueil/media/').replace('\\', '/')
 
 # Application definition
 

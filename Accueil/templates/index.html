@@ -248,11 +248,13 @@ Durée du traitement: 1h</p>
             </div>
           </div>
         </div>
-          <br>
-          {% for promo in promo %}
-            <img src="{{ promo.photoPromo.url }}">
-            {% endfor %}
       </div>
+            <br>
+        <div style="text-align: center">
+          {% for promo in promo %}
+            <img style="width: 100%" src="{{ MEDIA_ROOT }}{{ promo.photoPromo.url }}">
+            {% endfor %}
+        </div>
     </section>
 
     <footer class="ftco-footer bg-light ftco-section">

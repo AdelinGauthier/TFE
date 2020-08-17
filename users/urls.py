@@ -17,6 +17,6 @@ urlpatterns = [
     path('profile/reservation', CreateSoinsSelect, name="reservation"),
     path('profile/Mes_reservation', MesReserv.as_view(), name="mesReserv"),
     path('profile/Mon_historique', Histo.as_view(), name="monHisto"),
-    path('profile/merci', MerciRes.as_view(), name="merci"),
+    path('profile/merci', MerciRes, name="merci"),
 
 ]
