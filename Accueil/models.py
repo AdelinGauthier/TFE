@@ -7,7 +7,7 @@ from noraMazy import settings
 
 class Promo(models.Model):
     name = models.CharField(max_length=100, default="", verbose_name="namePromo")
-    photoPromo = models.ImageField(upload_to='media/', blank=True, null=True, verbose_name="photoPromo")
+    photoPromo = models.ImageField(blank=True, null=True, verbose_name="photoPromo")
 
     def __unicode__(self):
         return self.name
