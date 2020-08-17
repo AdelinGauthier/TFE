@@ -99,12 +99,12 @@ def CreateSoinsSelect(request):
             msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
             msg += 'Commentaire additionnel : \n' + '\n' + '\n'
 
-            msg += request.user.forename + '\n'
-            msg += request.user.name + '\n'
-            msg += request.user.phone + '\n'
-            msg += request.user.adress1 + ' ' + request.user.adress2 + '\n' + '\n'
-            msg += 'Merci beaucoup ! Des bisous partout partout'
-            send_mail('Réservation de soins', msg, request.user.email,
+            msg += request.User.forename + '\n'
+            msg += request.User.name + '\n'
+            msg += request.User.phone + '\n'
+            msg += request.User.adress1 + ' ' + request.User.adress2 + '\n' + '\n'
+            msg += 'Merci beaucoup '
+            send_mail('Réservation de soins', msg, request.User.email,
                       ['mazy.nora@hotmail.com'], fail_silently=False)
             return HttpResponseRedirect('merci')
     else:

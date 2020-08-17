@@ -249,9 +249,9 @@ Durée du traitement: 1h</p>
           </div>
         </div>
           <br>
-          {% if promo.photoPromo %}
+          {% for promo in promo %}
             <img src="{{ promo.photoPromo.url }}">
-            {% endif %}
+            {% endfor %}
       </div>
     </section>
 
