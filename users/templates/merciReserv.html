@@ -14,7 +14,11 @@
 </head>
 <body>
 
-
+<script type="text/javascript">
+        setTimeout(function() {
+            window.location.href = "{% url 'Accueil' %}";
+        }, 6000);
+    </script>
 
   <div class="nav-right visible-xs">
   <div class="button" id="btn">
@@ -44,6 +48,8 @@
   <h1 class="merciTemp">Merci pour votre réservation !</h1>
     <h3 class="merciTemp">Votre demande a bien été prise en compte. Vous recevrez une réponse dans les prochaines 48h (jours ouvrables) par mail ou par téléphone.</h3>
     <h4 class="merciTemp">Veuillez vérifier régulièrement votre boite mail</h4>
+    <p></p>
+    <h4 class="merciTemp">Vous allez automatiquement être redirigé vers la page d'accueil</h4>
 </main>
 
 <div class="sidebar">
