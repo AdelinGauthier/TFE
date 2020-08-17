@@ -23,7 +23,7 @@ def contact(request):
                 if item.name == 'email':
                     mail = str(item.value())
                 msg += str(item.value()) + '\n'
-            msg += 'Merci beaucoup ! J attend ta réponse, des bisous !'
+            msg += 'Merci beaucoup ! J attend ta réponse !'
             send_mail('Formulaire de contact', str(msg), request.user,
                       ['a2l195@hotmail.fr'], fail_silently=False)
             return redirect('Accueil')
