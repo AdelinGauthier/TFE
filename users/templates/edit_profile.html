@@ -12,7 +12,7 @@
 </head>
 
 <body style="background-image: url({% static "images/passwordBack.jpg"%}); background-repeat: no-repeat; background-size: cover;">
-<a class="navbar-brand" href="{% url 'Accueil' %}">Nora Mazy</a>
+<a class="btn btn-dark" style="margin: 1%;" href="{% url 'users:profile' %}">Mon compte</a>
 
 <h4 class="helloUser">Modification de mes données</h4>
 
@@ -32,8 +32,9 @@
 
 {% endlanguage %}
 
-        <button type="submit">Submit</button>
+        <button class="btn btn-dark" type="submit">Modifier</button>
     </form>
+    <button class="btn btn-dark" type="submit">Supprimer mon compte (a faire)</button>
     </div>
     <br>
 </div>

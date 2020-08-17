@@ -50,8 +50,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Accueil/static/images/contact.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/merciReserv.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/merciReserv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/static/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/tarifs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/tarifs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/edit_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +91,11 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\users\static\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\Accueil\static\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\users\static\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -135,7 +139,7 @@
       <workItem from="1597497219004" duration="1724000" />
       <workItem from="1597516404534" duration="15000" />
       <workItem from="1597620102475" duration="1282000" />
-      <workItem from="1597666704681" duration="7374000" />
+      <workItem from="1597666704681" duration="8276000" />
     </task>
     <servers />
   </component>
