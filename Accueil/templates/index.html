@@ -269,16 +269,18 @@ Durée du traitement: 1h</p>
               </ul>
             </div>
           </div>
-          <div class="col-md-4">
+          {% if user.is_authenticated %}
+            <div class="col-md-4">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Help</h2>
+              <h2 class="ftco-heading-2">Besoin d'aide ?</h2>
               <div class="d-flex">
 	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
 	                <li><a href="{% url 'contact' %}" class="py-2 d-block">Contact</a></li>
 	              </ul>
 	            </div>
             </div>
-          </div>
+            </div>
+            {% endif %}
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Une question ?</h2>
@@ -301,7 +303,7 @@ Durée du traitement: 1h</p>
   <div class="cookie-consent-banner__inner">
     <div class="cookie-consent-banner__copy">
       <div class="cookie-consent-banner__header">VOS INFORMATIONS PERSONELLES</div>
-      <div class="cookie-consent-banner__description">Toutes les données enregistrées sur ce site sont uniquement utilisées dans le cadre de l'utilisation de celui-ci, ainsi que pour vous fournir un soin de qualité.</div>
+      <div class="cookie-consent-banner__description">Toutes les données enregistrées sur ce site sont uniquement utilisées dans le cadre de l'utilisation de celui-ci, ainsi que pour vous fournir un soin de qualité. Si vous continuez à utiliser ce site, nous supposons que vous en êtes satisfait.</div>
     </div>
 
     <div class="cookie-consent-banner__actions">

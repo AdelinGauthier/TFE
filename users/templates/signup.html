@@ -13,7 +13,7 @@
 
 
 
-<a class="loginAccueil" href="{% url 'Accueil' %}">Accueil</a>
+<a class="btn btn-dark" style="margin: 1%;" href="{% url 'users:profile' %}">Accueil</a>
 
 
 <div id="form-main">
@@ -29,6 +29,8 @@
 <form method="post">
   {% csrf_token %}
   {{ form|crispy }}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA"></div>
   <button type="submit">Sign up</button>
 </form>
       {% endlanguage %}

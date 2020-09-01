@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 from django.utils import timezone
 from soins.models import SoinsSelect
+from django.utils.timezone import now
 
 
 class UserManager(BaseUserManager):
@@ -57,8 +58,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     forename = models.CharField(max_length=254, null=True, blank=True)
     adress1 = models.CharField(max_length=254, null=True, blank=True)
     adress2 = models.CharField(max_length=254, null=True, blank=True)
-    dateNaiss = models.DateField(null=True, blank=True)
-    fidelity = models.IntegerField(null=True, blank=True, editable=True)
+    dateNaiss = models.DateField(default=now, null=True, blank=True)
+    fidelity = models.IntegerField(default=0, null=True, blank=True, editable=True)
     phone = models.CharField(max_length=16, null=True, blank=True)
 
     USERNAME_FIELD = 'email'

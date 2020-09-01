@@ -20,6 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'zc!&$ya-nhg(vwjy_qk@fdw+qmu9&_)md@r!!o06sczob)u&_8'
+RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
+RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,6 +62,7 @@ INSTALLED_APPS = [
     'users',
     'soins',
     'bootstrap4',
+    'captcha',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

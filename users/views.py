@@ -97,7 +97,6 @@ def CreateSoinsSelect(request):
                     if item.value():
                         soins += '- ' + item.label + ', \n'
             msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
-            msg += 'Commentaire additionnel : \n' + '\n' + '\n'
 
             msg += request.user.forename + '\n'
             msg += request.user.name + '\n'

@@ -50,12 +50,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Accueil/static/images/contact.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accueil/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/static/css/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Accueil/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Accueil/templates/tarifs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/tarifs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noraMazy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/noraMazy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/merciReserv.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/merciReserv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/profileRes.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/profileRes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +148,13 @@
       <workItem from="1597497219004" duration="1724000" />
       <workItem from="1597516404534" duration="15000" />
       <workItem from="1597620102475" duration="1282000" />
-      <workItem from="1597666704681" duration="8276000" />
+      <workItem from="1597666704681" duration="9075000" />
+      <workItem from="1597684601020" duration="7000" />
+      <workItem from="1597687248319" duration="4247000" />
+      <workItem from="1597758146317" duration="3450000" />
+      <workItem from="1598110704660" duration="1784000" />
+      <workItem from="1598369328545" duration="227000" />
+      <workItem from="1598997254293" duration="1905000" />
     </task>
     <servers />
   </component>
