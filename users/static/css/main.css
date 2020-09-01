@@ -33,10 +33,11 @@ body, html {
 
 
 .loginForm {
-    color: black;
-  border-radius: 25%;
-  padding:15%;
-  background-color: rgba(245, 245, 245, 0.9);
+    color: white;
+    border-radius: 0.5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 5% 1%;
+    padding: 2vh 2vw;
 }
 .loginAccueil{
     color:black;
@@ -51,21 +52,22 @@ body, html {
 }
 
 .loginForm1 {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 3%;
-    color: black;
-    padding: 3%;
+    color: white;
+    padding: 2% 3%;
 
-  border-radius: 8%;
-  background-color: rgba(245, 245, 245, 0.6);
+  border-radius: 0.5%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .title{
     text-align: center;
     font-size: 400%;
-    background-color: rgba(245, 245, 245, 0.6);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 0.5% 0%;
 }
 

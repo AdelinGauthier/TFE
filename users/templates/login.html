@@ -8,28 +8,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
 <div class="hero-wrap js-fullheight" style="background-image: url({% static "images/NoraMazy.jpg"%}); background-repeat: no-repeat; background-size: cover;">
-
-
-<a class="btn btn-dark" style="margin: 1%;" href="{% url 'users:profile' %}">Accueil</a>
-<div class="container h-100 d-flex justify-content-center">
-    <div>
-
-    </div>
-    <div class="ol-6 align-self-center p-3 mb-2 bg-dark text-white bg-transparent">
-
-        <div class="loginForm">
-
-<h1 class="">Connexion</h1>
-<form method="POST">
-    <div class="form-group">
-  {% csrf_token %}
-  {{ form.as_p }}
-    </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
-    </div>
+    <a class="btn btn-dark" style="margin: 1%;" href="{% url 'Accueil' %}">Accueil</a>
+    <div class="container h-100 d-flex justify-content-center">
+        <div class="ol-6 align-self-center p-3 mb-2 bg-dark bg-transparent">
+            <div class="loginForm">
+                <h1 style="text-align: center;">Connexion</h1>
+                {% load crispy_forms_filters %}
+                <form method="POST">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                </form>
+            </div>
         </div>
- </div>
+    </div>
 </div>
