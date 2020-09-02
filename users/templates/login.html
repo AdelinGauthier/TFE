@@ -23,9 +23,14 @@
                         {% csrf_token %}
                         {{ form|crispy }}
                         <script src='https://www.google.com/recaptcha/api.js'></script>
-                        <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA"></div>
+                        <script>
+                            function enableBtn(){
+                                document.getElementById("button2").disabled = false;
+                            }
+                        </script>
+                        <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA" data-callback="enableBtn"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                    <button type="submit" class="btn btn-primary" id="button2" disabled="disabled">Se connecter</button>
                 </form>
             </div>
         </div>

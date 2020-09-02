@@ -29,8 +29,13 @@
   {% csrf_token %}
   {{ form|crispy }}
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA"></div>
-  <button type="submit" class="btn btn-primary mt-3">Je m'inscris</button>
+    <script>
+        function enableBtn(){
+            document.getElementById("button1").disabled = false;
+        }
+    </script>
+    <div class="g-recaptcha" data-sitekey="6LePcsYZAAAAALlzceDG4_3M1e8Kgcr3kCMPwLJA" data-callback="enableBtn"></div>
+  <button type="submit" class="btn btn-primary mt-3" id="button1" disabled="disabled">Je m'inscris</button>
 </form>
       {% endlanguage %}
 </div>
