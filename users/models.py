@@ -39,8 +39,7 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password, story, name, forename, historique, adress1, adress2, dateNaiss,
-                         fidelity, phone):
+    def create_superuser(self, email, password, name, forename, adress1, adress2, dateNaiss, phone, story='', historique='', fidelity=0):
         user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
         return user
@@ -81,4 +80,4 @@ class SoinsList(models.Model):
 class Historique(models.Model):
     historique = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Historique')
     HistoriqueDesSoins = models.CharField(blank=True, max_length=254)
-    Date = models.DateField(null=True, blank=True)
+    Date = models.DateTimeField(null=True, blank=True)

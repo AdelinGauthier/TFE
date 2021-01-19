@@ -80,6 +80,19 @@ def change_password(request):
         return render(request, 'change_password.html', args)
 
 
+def deletePage(request):
+    return render(request, 'suppressionCompte.html')
+
+
+def deleteConfirmation(request):
+    return render(request, 'ConfirmationSuppression.html')
+
+
+def delete_user(request):
+    request.user.delete()
+    return render(request, 'confirmationSuppression.html')
+
+
 def CreateSoinsSelect(request):
     if request.method == 'POST':
         form = SoinsSelectForm(request.POST)
@@ -105,6 +118,14 @@ def CreateSoinsSelect(request):
             msg += 'Merci beaucoup '
             send_mail('Réservation de soins', msg, request.user.email,
                       ['nora.mazy.contact@gmail.com'], fail_silently=False)
+
+            usermsg = 'Bonjour,' + '\n' + '\n' + 'Vous venez de réaliser la réservation des soins suivants : ' + '\n'
+            usermsg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
+            usermsg += 'Merci beaucoup pour votre réservation, je vous recontacterai dans les plus brefs délais.' + '\n' + '\n'
+            usermsg += 'Nora Mazy'
+            send_mail('Réservation de soins', usermsg, 'nora.mazy.contact@gmail.com',
+                      [request.user.email], fail_silently=False)
+
             return redirect('users:merci')
     else:
         form = SoinsSelectForm()

@@ -30,7 +30,6 @@ class EditProfileForm(UserChangeForm):
             'email',
             'name',
             'forename',
-            'password',
             'adress1',
             'adress2',
             'phone'
@@ -39,7 +38,6 @@ class EditProfileForm(UserChangeForm):
             'email': 'Adresse mail',
             'name': 'Nom',
             'forename': 'Prénom',
-            'password': 'Mot de passe',
             'adress1': 'Adresse 1',
             'adress2': 'Adresse 2',
             'phone': 'N° téléphone',
