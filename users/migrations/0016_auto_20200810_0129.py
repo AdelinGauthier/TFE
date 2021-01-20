@@ -11,13 +11,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Book',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=16)),
-            ],
-        ),
         migrations.RemoveField(
             model_name='user',
             name='soins',
@@ -26,13 +19,5 @@ class Migration(migrations.Migration):
             model_name='user',
             name='soins',
             field=models.TextField(blank=True),
-        ),
-        migrations.CreateModel(
-            name='Review',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('review', models.TextField(max_length=16)),
-                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='users.Book')),
-            ],
         ),
     ]

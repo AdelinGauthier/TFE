@@ -50,16 +50,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/users/templates/confirmationSuppression.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/suppressionCompte.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Accueil/static/images/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noraMazy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/noraMazy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/css/editProf.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/css/editProf.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/static/images/favicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/templates/tarifs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/templates/tarifs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0016_auto_20200810_0129.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0016_auto_20200810_0129.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/confirmationSuppression.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/confirmationSuppression.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/edit_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/merciReserv.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/merciReserv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/profileRes.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/profileRes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/suppressionCompte.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/suppressionCompte.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/historique_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/historique_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/soinslist_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/soinslist_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +105,11 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\Accueil\static\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\users\static\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Professionnel\Desktop\EPHEC\TFE\Accueil\static\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,7 +163,16 @@
       <workItem from="1609950838684" duration="3000000" />
       <workItem from="1610201994815" duration="10263000" />
       <workItem from="1610293563679" duration="2561000" />
+      <workItem from="1611076128347" duration="3374000" />
     </task>
+    <task id="LOCAL-00001" summary="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client">
+      <created>1611076440407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611076440407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,14 +190,14 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597367784506">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611076455315">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597367784506" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1597366771949">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597366771949" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611076455315" />
   </component>
 </project>
