@@ -30,7 +30,7 @@ def contact(request):
             send_mail('Formulaire de contact', str(msg), request.user,
                       ['nora.mazy.contact@gmail.com'], fail_silently=False)
             send_mail('Confirmation de demande', str(conf), 'nora.mazy.contact@gmail.com',
-                      [request.user.email], fail_silently=False)
+                      [request.user], fail_silently=False)
             return redirect('Accueil')
     else:
         form = ContactForm()
