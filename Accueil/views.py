@@ -19,15 +19,17 @@ def contact(request):
             form.save()
             mail = ''
             msg = 'Salut Nora, je te contact via le formulaire de demande : \n'
-            conf = 'test'
+            conf = 'Bonjour,\n\nJe vous confirme par la présente que votre demande a bien été envoyée.'
             for item in form:
                 if item.name == 'email':
                     mail = str(item.value())
                 msg += str(item.value()) + '\n'
+                conf += str(item.value()) + '\n'
             msg += 'Merci beaucoup ! J attend ta réponse !'
+            conf += '\nJe vous répond dés que possible.\n Cordialement,\n Nora Mazy'
             send_mail('Formulaire de contact', str(msg), request.user,
                       ['nora.mazy.contact@gmail.com'], fail_silently=False)
-            send_mail('Formulaire de contact', str(conf), 'nora.mazy.contact@gmail.com',
+            send_mail('Confirmation de votre demande', str(conf), 'nora.mazy.contact@gmail.com',
                       [request.user], fail_silently=False)
             return redirect('Accueil')
     else:

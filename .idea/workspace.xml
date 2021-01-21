@@ -51,7 +51,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6afdce0a-f023-4bdb-a918-ffbc6207a46b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Accueil/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noraMazy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/noraMazy/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,7 @@
       <workItem from="1610201994815" duration="10263000" />
       <workItem from="1610293563679" duration="2561000" />
       <workItem from="1611076128347" duration="5280000" />
-      <workItem from="1611258708945" duration="2927000" />
+      <workItem from="1611258708945" duration="3571000" />
     </task>
     <task id="LOCAL-00001" summary="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client">
       <created>1611076440407</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611261183847</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="debug">
+      <created>1611261652486</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611261652486</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,9 +268,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611261187429">
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611261657811">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611261187429" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611261657811" />
   </component>
 </project>
