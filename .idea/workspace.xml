@@ -147,7 +147,7 @@
       <workItem from="1610201994815" duration="10263000" />
       <workItem from="1610293563679" duration="2561000" />
       <workItem from="1611076128347" duration="5280000" />
-      <workItem from="1611258708945" duration="1567000" />
+      <workItem from="1611258708945" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client">
       <created>1611076440407</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611259356432</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Mail finalisation">
+      <created>1611260294742</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611260294742</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,12 +222,13 @@
     <MESSAGE value="debug" />
     <MESSAGE value="mail debug" />
     <MESSAGE value="DB finalisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB finalisation" />
+    <MESSAGE value="Mail finalisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mail finalisation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611259360581">
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611260299383">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611259360581" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611260299383" />
   </component>
 </project>

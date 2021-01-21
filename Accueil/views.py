@@ -27,10 +27,10 @@ def contact(request):
                 conf += str(item.value()) + '\n'
             msg += 'Merci beaucoup ! J attend ta réponse !'
             conf += '\nJe traite votre demande dans les plus brefs délais\n Cordialement, \n Nora Mazy'
-            send_mail('Formulaire de contact', str(msg), request.user.email,
+            send_mail('Formulaire de contact', str(msg), request.user,
                       ['nora.mazy.contact@gmail.com'], fail_silently=False)
             send_mail('Confirmation de demande', str(conf), 'nora.mazy.contact@gmail.com',
-                      [request.user.email], fail_silently=False)
+                      [request.user], fail_silently=False)
             return redirect('Accueil')
     else:
         form = ContactForm()
