@@ -149,7 +149,7 @@
       <workItem from="1610293563679" duration="2561000" />
       <workItem from="1611076128347" duration="5280000" />
       <workItem from="1611258708945" duration="5500000" />
-      <workItem from="1611295599658" duration="21000" />
+      <workItem from="1611295599658" duration="1052000" />
     </task>
     <task id="LOCAL-00001" summary="Suppression compte + MDP + Heure réserv Histo + Confirm mail reserv client">
       <created>1611076440407</created>
@@ -249,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611262559254</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Debug admin">
+      <created>1611295634598</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611295634598</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Debug admin">
+      <created>1611296594915</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611296594915</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,12 +289,13 @@
     <MESSAGE value="Mail finalisation" />
     <MESSAGE value="debug" />
     <MESSAGE value="debug mail final" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug mail final" />
+    <MESSAGE value="Debug admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug admin" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611262572749">
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611296601848">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611262572749" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/327.-1080.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1611296601848" />
   </component>
 </project>
