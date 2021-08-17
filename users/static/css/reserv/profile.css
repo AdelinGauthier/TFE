@@ -15,9 +15,6 @@ main {
   z-index: 2;
   position: relative;
   height: 100%;
-
-
-
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
   -ms-transition: transform .7s ease-in-out;
@@ -263,7 +260,6 @@ h4 {
     margin: auto;
     font-size: 18px;
     text-align: center;
-
     color: white;
 }
 
@@ -276,3 +272,4 @@ h4 {
   color: black;
   font-size: 400%;
 }
+

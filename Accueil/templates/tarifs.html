@@ -1,13 +1,13 @@
 <head>
 <title>Nora Mazy - Les Tarifs</title>
 {% load static %}
-    <link rel="stylesheet" href="{% static "css/tarifs/tarifs.css" %}">
     <link rel="icon" href="{% static "images/favicon.png" %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/tarifs/tarifs.css" %}">
 </head>
 
 <body style="background-image: url({% static "images/fondProfile.jpg"%}); background-repeat: no-repeat; background-size: cover;">
-   <a class="btn btn-dark" style="margin: 1%;" href="{% url 'Accueil' %}">Accueil</a>
+   <a class="btn btn-dark buttonAccueil" href="{% url 'Accueil' %}">Accueil</a>
 <section>
   <h4 class="helloUser">Tarifs</h4>
   <details>

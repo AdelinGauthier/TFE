@@ -8,7 +8,7 @@ from django.views.generic.detail import DetailView
 from . import models
 from .forms import SignUpForm
 from soins.forms import SoinsSelectForm
-from .forms import EditProfileForm
+from .forms import EditProfileForm, Dispos
 
 from django.urls import reverse
 
@@ -19,7 +19,7 @@ from django.shortcuts import render
 
 from django.core.mail import send_mail
 
-from .models import SoinsList, Historique
+from .models import SoinsList, Historique, Dispo as DispoModel
 
 
 class UserView(DetailView):
@@ -96,45 +96,60 @@ def delete_user(request):
 def CreateSoinsSelect(request):
     if request.method == 'POST':
         form = SoinsSelectForm(request.POST)
+        form2=request.POST.get('my_dates', None)
         if form.is_valid():
             form.save()
+
             msg = 'Salut Nora, serait-il possible de réserver les soins suivants : \n'
             soins = ''
             test = ''
             jour = ''
             for item in form:
                 test += str(item.value())
-                if item.name == 'date':
-                    jour = item.value()
-                else:
+                jour = form2
+                if item.value() and item.label != 'Commentaire':
+                    soins += '- ' + item.label + ', \n'
+                if item.label == 'Commentaire':
                     if item.value():
-                        soins += '- ' + item.label + ', \n'
+                        soins += '\nCommentaire : \n' + item.value() + '\n'
             msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
 
             msg += request.user.forename + '\n'
             msg += request.user.name + '\n'
             msg += request.user.phone + '\n'
             msg += request.user.adress1 + ' ' + request.user.adress2 + '\n' + '\n'
-            msg += 'Merci beaucoup '
+            msg += 'Merci pour votre confiance !'
             send_mail('Réservation de soins', msg, request.user.email,
                       ['nora.mazy.contact@gmail.com'], fail_silently=False)
 
-            usermsg = 'Bonjour,' + '\n' + '\n' + 'Vous venez de réaliser la réservation des soins suivants : ' + '\n'
+            usermsg = 'Bonjour,' + '\n' + '\n' + 'Merci pour votre réservation.' + '\n' + '\n'
             usermsg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
-            usermsg += 'Merci beaucoup pour votre réservation, je vous recontacterai dans les plus brefs délais.' + '\n' + '\n'
+            usermsg += 'Merci beaucoup !' + '\n' + '\n'
             usermsg += 'Nora Mazy'
-            send_mail('Réservation de soins', usermsg, 'nora.mazy.contact@gmail.com',
+            send_mail('Merci pour votre réservation', usermsg, 'nora.mazy.contact@gmail.com',
                       [request.user.email], fail_silently=False)
 
             return redirect('users:merci')
     else:
         form = SoinsSelectForm()
-    return render(request, 'profileRes.html', {'form': form})
+        form2 = DispoModel.objects.all().order_by('Date')
+        print(form2)
+    return render(request, 'profileRes.html', {'form': form, 'form2': form2})
 
 
 class MesReserv(ListView):
     model = SoinsList
+    template_name = 'users/soinslist_list.html'
+    context_object_name = 'soin_list'
+
+    def get_queryset(self):
+        return SoinsList.objects.filter(soin=self.request.user)
 
 
 class Histo(ListView):
     model = Historique
+    template_name = 'users/historique_list.html'
+    context_object_name = 'histo_list'
+
+    def get_queryset(self):
+        return Historique.objects.filter(historique=self.request.user)

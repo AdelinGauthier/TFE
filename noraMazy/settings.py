@@ -24,9 +24,11 @@ RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
 RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['noramazy.be']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['noramazy.be']
+
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
@@ -165,6 +167,8 @@ DATE_INPUT_FORMATS = ['%d-%m-%Y'
                       '%d/%m/%Y'
                       '%d %m %Y']
 
+TIME_INPUT_FORMATS = ['%H:%M']
+
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -175,7 +179,6 @@ EMAIL_HOST_USER = "nora.mazy.contact@gmail.com"
 EMAIL_HOST_PASSWORD = 'NoMaz/33'
 EMAIL_PORT = '587'
 
-
-
 import django_heroku
+
 django_heroku.settings(locals())

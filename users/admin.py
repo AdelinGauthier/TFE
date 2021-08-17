@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin.options import InlineModelAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from .models import User, SoinsList, Historique
+from .models import User, SoinsList, Historique, Dispo
 
 
 class SoinsAdmin(admin.TabularInline):
@@ -13,8 +13,12 @@ class HistoriqueAdmin(admin.TabularInline):
     model = Historique
 
 
+class DispoAdmin(admin.TabularInline):
+    model = Dispo
+
+
 class UserAdmin(BaseUserAdmin):
-    inlines = [SoinsAdmin, HistoriqueAdmin]
+    inlines = [SoinsAdmin, HistoriqueAdmin, DispoAdmin]
     fieldsets = (
         (None, {'fields': ('email', 'name', 'last_login', 'phone', ('adress1', 'adress2'), 'dateNaiss')}),
         ('Infos Personnelles', {'fields': (

@@ -23,10 +23,6 @@ class SoinsSelectForm(ModelForm):
             'teintureSourcils': 'Teinture Sourcils',
             'epilationSourcil': 'Epilation Sourcils',
             'soin3d': 'Cure 3D Filler',
-            'date': 'Date',
+            'comment': 'Commentaire',
         }
-
-
-class SoinsSelectForm1(ModelForm):
-    date = db_models.DateField()
 

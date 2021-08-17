@@ -6,20 +6,11 @@
     box-sizing: border-box;
 }
 
-h1{
-	text-align: center;
-}
-
-
-
 .ac-custom {
-	padding: 0 3em;
-	max-width: 900px;
-	margin-left: 35%;
+	max-width: 95%;
 	margin-top: 7%;
 
 }
-
 
 .ac-custom h2 {
 	font-size: 3em;
@@ -82,17 +73,11 @@ h1{
 	transition: opacity 0.3s;
 }
 
-.ac-radio label::before {
-	border-radius: 50%;
-}
-
-.ac-custom input[type="checkbox"]:checked + label,
-.ac-custom input[type="radio"]:checked + label {
+.ac-custom input[type="checkbox"]:checked + label{
 	color: #000;
 }
 
-.ac-custom input[type="checkbox"]:checked + label::before,
-.ac-custom input[type="radio"]:checked + label::before {
+.ac-custom input[type="checkbox"]:checked + label::before{
 	opacity: 0.8;
 }
 
@@ -116,82 +101,7 @@ h1{
 	fill: none;
 }
 
-/* Specific input, SVG and path styles */
-
-/* Circle */
-.ac-circle input[type="checkbox"],
-.ac-circle input[type="radio"],
-.ac-circle label::before {
-	width: 30px;
-	height: 30px;
-	margin-top: -15px;
-	left: 10px;
-	position: absolute;
-}
-
-.ac-circle label::before {
-	background-color: #000;
-	border: none;
-}
-
-.ac-circle svg {
-	width: 70px;
-	height: 70px;
-	margin-top: -35px;
-	left: -10px;
-}
-
-.ac-circle svg path {
-	stroke-width: 5px;
-} 
-
 /* Box Fill */
 .ac-boxfill svg path {
 	stroke-width: 8px;
-} 
-
-/* Swirl */
-.ac-swirl svg path {
-	stroke-width: 8px;
-}
-
-/* List */
-.ac-list ol {
-	list-style: decimal;
-	list-style-position: inside;
-}
-
-.ac-list ol li {
-	font-size: 2em;
-	padding: 1em 1em 0 2em;
-	text-indent: -40px;
-}
-
-.ac-list ol li label {
-	font-size: 1em;
-	text-indent: 0;
-	padding-left: 30px;
-}
-
-.ac-list label::before {
-	display: none;
-}
-
-.ac-list svg {
-	width: 100%;
-	height: 80px;
-	left: 0;
-	top: 1.2em;
-	margin-top: 0px;
-}
-
-.ac-list svg path {
-	stroke-width: 4px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 50em) {
-	section {
-		font-size: 80%;
-	}
 }

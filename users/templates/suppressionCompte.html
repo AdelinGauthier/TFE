@@ -3,15 +3,16 @@
 <head>
     <title>Nora mazy - Merci</title>
     {% load static %}
+    <meta name="viewport" content="width=device-width">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="{% static "css/profile.css"%}">
     <link rel="icon" href="{% static "images/favicon.png" %}">
-		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/normalize.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/demo.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/component.css" %}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script src="js/modernizr.custom.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static "css/reserv/normalize.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/demo.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/reserv/component.css" %}" />
+        <link rel="stylesheet" href="{% static "css/profile.css"%}">
 
 </head>
 <body>
@@ -57,7 +58,7 @@
 <div class="sidebar">
   <ul class="sidebar-list">
       <li class="sidebar-item"><a href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
-    <li class="sidebar-item"><a href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor" data-rel="1" class="active">Mon compte</a></li>
+    <li class="sidebar-item"><a href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor active" data-rel="1">Mon compte</a></li>
     <li class="sidebar-item"><a href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
     <li class="sidebar-item"><a href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
     <li class="sidebar-item"><a href="{% url 'users:monHisto' %}" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>

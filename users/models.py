@@ -39,27 +39,27 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password, name, forename, adress1, adress2, dateNaiss, phone, story='', historique='', fidelity=0):
+    def create_superuser(self, email, password, name:'', forename='', adress1='', adress2='', dateNaiss='', phone='', story='', historique='', fidelity=0):
         user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
         return user
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(max_length=254, unique=True)
-    name = models.CharField(max_length=254, null=True, blank=True)
+    email = models.EmailField(max_length=254, unique=True, blank=False)
+    name = models.CharField(max_length=254, null=True, blank=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     last_login = models.DateTimeField(null=True, blank=True)
     date_joined = models.DateTimeField(auto_now_add=True)
     story = models.TextField(blank=True)
-    forename = models.CharField(max_length=254, null=True, blank=True)
-    adress1 = models.CharField(max_length=254, null=True, blank=True)
-    adress2 = models.CharField(max_length=254, null=True, blank=True)
-    dateNaiss = models.DateField(default=now, null=True, blank=True)
+    forename = models.CharField(max_length=254, null=True, blank=False)
+    adress1 = models.CharField(max_length=254, null=True, blank=False)
+    adress2 = models.CharField(max_length=254, null=True, blank=False)
+    dateNaiss = models.DateField(default=now, null=True, blank=False)
     fidelity = models.IntegerField(default=0, null=True, blank=True, editable=True)
-    phone = models.CharField(max_length=16, null=True, blank=True)
+    phone = models.CharField(max_length=16, null=True, blank=False)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
@@ -81,3 +81,9 @@ class Historique(models.Model):
     historique = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Historique')
     HistoriqueDesSoins = models.CharField(blank=True, max_length=254)
     Date = models.DateTimeField(null=True, blank=True)
+
+
+class Dispo(models.Model):
+    admin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Admin')
+    Date = models.DateField(null=True, blank=True)
+    Hour = models.TimeField(null=True, blank=True)

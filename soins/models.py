@@ -20,7 +20,7 @@ class SoinsSelect(models.Model):
     teintureCils = models.BooleanField(default=False)
     teintureSourcils = models.BooleanField(default=False)
     epilationSourcil = models.BooleanField(default=False)
-    date = models.DateField(default=datetime.date.today)
+    comment = models.TextField(default='')
 
 
 class FichesClients(models.Model):

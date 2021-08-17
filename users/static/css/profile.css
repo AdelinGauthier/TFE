@@ -15,9 +15,6 @@ main {
   z-index: 2;
   position: relative;
   height: 100%;
-
-
-
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
   -ms-transition: transform .7s ease-in-out;
@@ -25,15 +22,31 @@ main {
   transition: transform .7s ease-in-out;
 }
 
-.sidebar {
-  height: 100%;
-  width: 400px;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  right: 0;
-  background-color: black;
+@media (min-width: 100px) {
+  .sidebar {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    background-color: black;
+  }
 }
+
+@media (min-width: 700px) {
+  .sidebar {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    background-color: black;
+  }
+}
+
+
 
 .bar {
   display: block;
@@ -44,10 +57,12 @@ main {
 }
 
 .button {
+  position: fixed;
   cursor: pointer;
   display: inline-block;
   width: auto;
   margin: 0 auto;
+  right: 3%;
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
@@ -132,7 +147,7 @@ nav {
 }
 
 .sidebar-item {
-  margin: 20% 0;
+  margin: 10% 0;
   opacity: 0;
   -webkit-transform: translateY(-20px);
   -moz-transform: translateY(-20px);
@@ -182,13 +197,26 @@ nav {
   transform: translateY(0px);
 }
 
-.sidebar-anchor {
-  color: #FFF;
-  text-decoration: none;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 7px;
+@media (min-width: 100px) {
+  .sidebar-anchor {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 7px;
+  }
+}
+
+@media (min-width: 700px) {
+  .sidebar-anchor {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 7px;
+  }
 }
 
 .sidebar-anchor:before {
@@ -258,33 +286,9 @@ nav {
   }
 }
 
-
-
-
-h4 {
-    margin: auto;
-    font-size: 18px;
-    text-align: center;
-
-    color: white;
-}
-
 section {
     margin: auto;
     display: none;
-}
-
-.compteAff{
-  text-align: center;
-}
-
-.helloUser{
-  padding:0%;
-  margin-top:3%;
-  margin-bottom:3%;
-  font-family: 'lato', sans-serif;
-  color: black;
-  font-size: 400%;
 }
 
 .myData{
@@ -297,85 +301,475 @@ section {
   margin-bottom: 10%;
 }
 
-
-
-
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 4%;
+.menuButton{
+  font-size:310%;
+  float: left;
 }
-
-h2 {
-  font-size: 26px;
-  margin: 20px 0;
-  text-align: center;
-}
-h2 small {
-  font-size: 0.5em;
-}
-
-.responsive-table li {
-  border-radius: 3px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-.responsive-table .table-header {
-  background-color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-.responsive-table .table-row {
-  background-color: rgba(254, 254, 254, 0.75);
-  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
-}
-.responsive-table .col-1 {
-  flex-basis: 10%;
-  text-transform: uppercase;
-}
-.responsive-table .col-2 {
-  flex-basis: 40%;
-}
-.responsive-table .col-3 {
-  flex-basis: 25%;
-}
-.responsive-table .col-4 {
-  flex-basis: 25%;
-}
-@media all and (max-width: 767px) {
-  .responsive-table .table-header {
-    display: none;
-  }
-  .responsive-table li {
-    display: block;
-  }
-  .responsive-table .col {
-    flex-basis: 100%;
-  }
-  .responsive-table .col {
-    display: flex;
-    padding: 10px 0;
-  }
-  .responsive-table .col:before {
-    color: rgba(255, 255, 255, 0.3);
-    padding-right: 10px;
-    content: attr(data-label);
-    flex-basis: 50%;
-    text-align: right;
-  }
-}
-
 
 .merciTemp{
   text-align: center;
   color: black;
-  color: black;
 }
+
+
+
+@media only screen and (max-width: 3000px) {
+  h4{
+    text-align: center;
+  }
+
+  .compteAff{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+  }
+
+  .formLeft{
+    text-align: left;
+  }
+
+  .commentDate{
+    text-align: center;
+  }
+
+  .commentDate label{
+        padding:0;
+  }
+
+  .option{
+    font-size: 110%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .helloUser{
+    padding:0%;
+    margin-top:3%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 400%;
+    text-align: center;
+  }
+
+  .titrePersoSpace{
+    margin-top:3%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 350%;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+
+  .responsive-table li {
+    border-radius: 3px;
+    width: 95%;
+    margin-bottom: 40px;
+    list-style-type: none;
+  }
+
+  .table-row {
+    background-color: rgba(254, 254, 254, 0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    padding-bottom: 3.5%;
+    font-weight: 500;
+    font-size: 130%;
+
+  }
+
+  .left {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .text-center {
+    margin: auto;
+  }
+
+  .persoData {
+    font-size: 140%;
+    text-align: center;
+  }
+
+  .btn-lg{
+    font-size: 150%;
+    padding: 2%;
+    margin-bottom: 5%;
+  }
+
+  .reservButton{
+    font-size: 170%;
+  }
+
+  .ac-custom {
+    font-size: 100%;
+  }
+
+  .remarques{
+    text-shadow: -1px 0 white, 0 1px white,
+      1px 0 white, 0 -1px white
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  h4{
+    text-align: center;
+  }
+
+  .compteAff{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%
+  }
+
+  .formLeft{
+    text-align: left;
+  }
+
+  .commentDate{
+    text-align: center;
+  }
+
+  .commentDate label{
+        padding:0;
+  }
+
+  .option{
+    font-size: 150%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titrePersoSpace{
+    margin-top:12%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 350%;
+  }
+
+  .helloUser{
+    margin-top:12%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 350%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  ul{
+    padding-left:35px;
+    margin-bottom: 10%;
+  }
+
+  .responsive-table li {
+    border-radius: 3px;
+    width: 95%;
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+
+  .table-row {
+    background-color: rgba(254, 254, 254, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 5.5%;
+    font-weight: 500;
+    font-size: 150%;
+  }
+
+  .left {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .text-center {
+    margin: auto;
+  }
+
+  .persoData {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 10%;
+  }
+
+  .btn-lg{
+    font-size: 200%;
+    margin-bottom: 5%;
+  }
+
+  .reservButton{
+    font-size: 190%;
+  }
+
+  .ac-custom {
+    font-size: 90%;
+  }
+
+  .remarques{
+    font-size: 150%;
+    text-shadow: -1px 0 white, 0 1px white,
+      1px 0 white, 0 -1px white
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  h4{
+    text-align: center;
+  }
+
+  .compteAff{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%
+  }
+
+  .formLeft{
+    text-align: left;
+  }
+
+  .commentDate{
+    text-align: center;
+  }
+
+  .commentDate label{
+        padding:0;
+  }
+
+  .option{
+    font-size: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titrePersoSpace{
+    margin-top:20%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 250%;
+  }
+
+  .helloUser{
+    margin-top:20%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 250%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  ul{
+    padding-left:10px;
+    margin-bottom: 10%;
+  }
+
+  .responsive-table li {
+    border-radius: 3px;
+    width: 95%;
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+
+  .table-row {
+    background-color: rgba(254, 254, 254, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 7%;
+    font-weight: 500;
+    font-size: 80%;
+
+  }
+
+  .left {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .text-center {
+    margin: auto;
+  }
+
+  .persoData {
+    text-align: center;
+    font-size: 100%;
+    margin-bottom: 15%;
+  }
+
+  .btn-lg{
+    font-size: 60%;
+    margin-bottom: 5%;
+  }
+
+  .reservButton{
+    font-size: 190%;
+  }
+
+  .ac-custom {
+    font-size: 60%;
+  }
+
+  .remarques{
+    font-size: 110%;
+    text-shadow: -1px 0 white, 0 1px white,
+      1px 0 white, 0 -1px white
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+    h4{
+    text-align: center;
+  }
+
+  .compteAff{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+  }
+
+  .formLeft{
+    text-align: left;
+  }
+
+  .commentDate{
+    text-align: center;
+  }
+
+  .commentDate label{
+        padding:0;
+  }
+
+  .option{
+    font-size: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titrePersoSpace{
+    margin-top:20%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 150%;
+  }
+
+  .helloUser{
+    margin-top:20%;
+    margin-bottom:3%;
+    font-family: 'lato', sans-serif;
+    color: black;
+    font-size: 250%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  ul{
+    padding-left:10px;
+    margin-bottom: 10%;
+  }
+
+  .responsive-table li {
+    border-radius: 3px;
+    width: 95%;
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+
+  .table-row {
+    background-color: rgba(254, 254, 254, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 8.5%;
+    font-weight: 500;
+    font-size: 80%;
+
+  }
+
+  .left {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .text-center {
+    margin: auto;
+  }
+
+  .persoData {
+    text-align: center;
+    font-size: 100%;
+    margin-bottom: 15%;
+  }
+
+  .btn-lg{
+    margin-bottom: 5%;
+  }
+
+  .reservButton{
+    font-size: 170%;
+  }
+
+  .ac-custom {
+    font-size: 60%;
+  }
+
+  .remarques{
+    font-size: 100%;
+    text-shadow: -1px 0 white, 0 1px white,
+      1px 0 white, 0 -1px white
+  }
+}
+
+
+
 
 

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Professionnel\Desktop\EPHEC\TFE\venv"
+VIRTUAL_ENV="C:\Users\DAD95\Documents\TFE\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

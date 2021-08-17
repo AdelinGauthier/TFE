@@ -3,6 +3,7 @@
 <head>
     <title>Nora mazy - Mon compte</title>
     {% load static %}
+    <meta name="viewport" content="width=device-width">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static "css/profile.css"%}">
@@ -43,43 +44,43 @@
     <div id="compteCache" class="compteAff">
         <article>
            <h4 class="helloUser">Hello {{ user.forename }}</h4>
-            <p>Mes données personnelles :</p>
-            <div class="container">
+            <p class="persoData">Mes données personnelles :</p>
               <ul class="responsive-table">
                 <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Prénom</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.forename }}</div>
+                  <div class="left" data-label="Job Id">Prénom</div>
+                  <div class="right" data-label="Customer Name">{{ user.forename }}</div>
                 </li>
                 <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Nom</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.name }}</div>
+                  <div class="left" data-label="Job Id">Nom</div>
+                  <div class="right" data-label="Customer Name">{{ user.name }}</div>
                 </li>
                 <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">email</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user }}</div>
+                  <div class="left" data-label="Job Id">email</div>
+                  <div class="right" data-label="Customer Name">{{ user }}</div>
                 </li>
                 <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Tel</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.phone }}</div>
+                  <div class="left" data-label="Job Id">Tel</div>
+                  <div class="right" data-label="Customer Name">{{ user.phone }}</div>
                 </li>
                   <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Adresse</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.adress1 }}  {{ user.adress2 }}</div>
+                  <div class="left" data-label="Job Id">Adresse</div>
+                  <div class="right" data-label="Customer Name">{{ user.adress1 }}  {{ user.adress2 }}</div>
                 </li>
             {% load i18n %}
             {% language 'fr' %}
                   <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Date de naissance</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.dateNaiss }}</div>
+                  <div class="left" data-label="Job Id">Date de naissance</div>
+                  <div class="right" data-label="Customer Name">{{ user.dateNaiss }}</div>
                 </li>
                  {% endlanguage %}
                   <li class="table-row">
-                  <div class="col col-1" data-label="Job Id">Mes points de fidelité</div>
-                  <div class="col col-2" data-label="Customer Name">{{ user.fidelity }}</div>
+                  <div class="left" data-label="Job Id">Mes points de fidelité</div>
+                  <div class="right" data-label="Customer Name">{{ user.fidelity }}</div>
                 </li>
               </ul>
              <div class="col-md-13 text-center">
                  <button type="submit" class="btn-lg btn-dark center-block"><a href="{% url 'users:edit_profile' %}" class="nav-link text-white">Changer mes informations</a></button>
+             </div>
         </article>
   </div>
 
@@ -88,11 +89,11 @@
 
 <div class="sidebar">
   <ul class="sidebar-list">
-      <li class="sidebar-item"><a style="color: white;", href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
-    <li class="sidebar-item"><a style="color: white;", href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor" data-rel="1" class="active">Mon compte</a></li>
-    <li class="sidebar-item"><a style="color: white;", href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
-    <li class="sidebar-item"><a style="color: white;", href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
-    <li class="sidebar-item"><a style="color: white;", href="{% url 'users:monHisto' %}" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
+      <li class="sidebar-item"><a style="color: white;" href="{% url 'Accueil' %}" class="sidebar-anchor">Accueil</a></li>
+    <li class="sidebar-item"><a style="color: white;" href="{% url 'users:profile' %}" onclick="test()" class="sidebar-anchor active" data-rel="1">Mon compte</a></li>
+    <li class="sidebar-item"><a style="color: white;" href="{% url 'users:reservation' %}" onclick="test()" class="sidebar-anchor" data-rel="2">Réserver un soin</a></li>
+    <li class="sidebar-item"><a style="color: white;" href="{% url 'users:mesReserv' %}" onclick="test()" class="sidebar-anchor" data-rel="3">Mes réservations</a></li>
+    <li class="sidebar-item"><a style="color: white;" href="{% url 'users:monHisto' %}" onclick="test()" class="sidebar-anchor" data-rel="4">Mon historique</a></li>
   </ul>
 </div>
 
