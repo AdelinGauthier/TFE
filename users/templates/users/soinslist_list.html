@@ -48,22 +48,27 @@
         {% language 'fr' %}
             {% for object in object_list %}
                 {% if object %}
-                    <div class="container">
-              <ul class="responsive-table">
-                <li class="table-row">
-                  <div class="left" data-label="Job Id">{{ object.liste }}</div>
-                  <div class="right" data-label="Customer Name">{{ object.Date  }}</div>
-                </li>
-              </ul>
-
+                    {% if object.isAccepted == True %}
+                        <div class="container">
+                          <ul class="responsive-table">
+                            <li class="table-row-green">
+                              <div class="left" data-label="Job Id">{{ object.liste }}</div>
+                              <div class="right" data-label="Customer Name">{{ object.Date  }}</div>
+                            </li>
+                          </ul>
+                     {% endif %}
+                    {% if object.isAccepted == False %}
+                        <div class="container">
+                          <ul class="responsive-table">
+                            <li class="table-row-red">
+                              <div class="left" data-label="Job Id">{{ object.liste }}</div>
+                              <div class="right" data-label="Customer Name">{{ object.Date  }} à 17h45</div>
+                            </li>
+                          </ul>
+                     {% endif %}
                     {% else %}
-
                     <h3 class="helloUser">Vous n'avez pas encore fait de réservation ou celle-ci n'a pas encore été acceptée</h3>
-
                 {% endif %}
-
-
-
             {% endfor %}
             {% endlanguage %}
             </div>

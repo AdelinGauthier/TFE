@@ -375,14 +375,31 @@ section {
     list-style-type: none;
   }
 
-  .table-row {
-    background-color: rgba(254, 254, 254, 0.75);
-    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  .table-row-green {
+    background-color: rgba(154, 201, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     padding: 2%;
     padding-bottom: 3.5%;
     font-weight: 500;
     font-size: 130%;
+  }
 
+  .table-row-red {
+    background-color: rgba(201, 141, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    padding-bottom: 3.5%;
+    font-weight: 500;
+    font-size: 130%;
+  }
+
+  .table-row-white {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    padding-bottom: 3.5%;
+    font-weight: 500;
+    font-size: 130%;
   }
 
   .left {
@@ -489,8 +506,26 @@ section {
     list-style-type: none;
   }
 
-  .table-row {
-    background-color: rgba(254, 254, 254, 0.75);
+  .table-row-green {
+    background-color: rgba(154, 201, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 5.5%;
+    font-weight: 500;
+    font-size: 150%;
+  }
+
+  .table-row-red {
+    background-color: rgba(201, 141, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 5.5%;
+    font-weight: 500;
+    font-size: 150%;
+  }
+
+  .table-row-white {
+    background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     padding-top: 4%;
     padding-bottom: 5.5%;
@@ -604,14 +639,31 @@ section {
     list-style-type: none;
   }
 
-  .table-row {
-    background-color: rgba(254, 254, 254, 0.75);
+  .table-row-green {
+    background-color: rgba(154, 201, 121, 0.75);
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     padding-top: 4%;
     padding-bottom: 7%;
     font-weight: 500;
     font-size: 80%;
+  }
 
+  .table-row-red {
+    background-color: rgba(201, 141, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 7%;
+    font-weight: 500;
+    font-size: 80%;
+  }
+
+  .table-row-white {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 7%;
+    font-weight: 500;
+    font-size: 80%;
   }
 
   .left {
@@ -720,14 +772,31 @@ section {
     list-style-type: none;
   }
 
-  .table-row {
-    background-color: rgba(254, 254, 254, 0.75);
+  .table-row-green {
+    background-color: rgba(154, 201, 121, 0.75);
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
     padding-top: 4%;
     padding-bottom: 8.5%;
     font-weight: 500;
     font-size: 80%;
+  }
 
+  .table-row-red {
+    background-color: rgba(201, 141, 121, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 8.5%;
+    font-weight: 500;
+    font-size: 80%;
+  }
+
+  .table-row-white {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 4%;
+    padding-bottom: 8.5%;
+    font-weight: 500;
+    font-size: 80%;
   }
 
   .left {

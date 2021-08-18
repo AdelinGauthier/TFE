@@ -55,8 +55,7 @@ class EditProfileForm(UserChangeForm):
 class Dispos(ModelForm):
     class Meta:
         model = Dispo
-        fields = ('Date', 'Hour')
+        fields = ('Date',)
         labels = {
             'Date': 'Date',
-            'Hour': 'Heure',
         }

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.contrib.auth import login, authenticate
@@ -96,7 +98,7 @@ def delete_user(request):
 def CreateSoinsSelect(request):
     if request.method == 'POST':
         form = SoinsSelectForm(request.POST)
-        form2=request.POST.get('my_dates', None)
+        form2 = request.POST.get('my_dates', None)
         if form.is_valid():
             form.save()
 
@@ -104,15 +106,23 @@ def CreateSoinsSelect(request):
             soins = ''
             test = ''
             jour = ''
+            transfertString = ''
             for item in form:
                 test += str(item.value())
                 jour = form2
                 if item.value() and item.label != 'Commentaire':
                     soins += '- ' + item.label + ', \n'
+                    transfertString += item.label + ' - '
                 if item.label == 'Commentaire':
                     if item.value():
                         soins += '\nCommentaire : \n' + item.value() + '\n'
-            msg += str(soins) + ' \nEn date du ' + str(jour) + '\n' + '\n' + '\n'
+            msg += str(soins) + ' \nEn date du ' + str(jour) + 'à 17h45.' + '\n' + '\n' + '\n'
+
+            transfertStringConverted = transfertString[0:len(transfertString) - 3]
+            date = DispoModel.objects.get(id=form2)
+            SoinsList.objects.create(soin=request.user, liste=transfertStringConverted, Date=date.Date,
+                                     isAccepted=False)
+            DispoModel.objects.filter(id=form2).delete()
 
             msg += request.user.forename + '\n'
             msg += request.user.name + '\n'
@@ -143,7 +153,7 @@ class MesReserv(ListView):
     context_object_name = 'soin_list'
 
     def get_queryset(self):
-        return SoinsList.objects.filter(soin=self.request.user)
+        return SoinsList.objects.filter(soin=self.request.user).order_by('Date')
 
 
 class Histo(ListView):
@@ -152,4 +162,4 @@ class Histo(ListView):
     context_object_name = 'histo_list'
 
     def get_queryset(self):
-        return Historique.objects.filter(historique=self.request.user)
+        return Historique.objects.filter(historique=self.request.user).order_by('Date')

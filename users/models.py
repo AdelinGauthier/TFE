@@ -39,7 +39,8 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, False, False, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
 
-    def create_superuser(self, email, password, name:'', forename='', adress1='', adress2='', dateNaiss='', phone='', story='', historique='', fidelity=0):
+    def create_superuser(self, email, password, name: '', forename='', adress1='', adress2='', dateNaiss='', phone='',
+                         story='', historique='', fidelity=0):
         user = self._create_user(email, password, True, True, story, name, forename, historique, adress1, adress2,
                                  dateNaiss, fidelity, phone)
         return user
@@ -74,7 +75,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 class SoinsList(models.Model):
     soin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Soins')
     liste = models.CharField(blank=True, max_length=254)
-    Date = models.DateTimeField(null=True, blank=True)
+    Date = models.DateField(null=True, blank=True)
+    isAccepted = models.BooleanField(null=True, blank=True, default=False)
 
 
 class Historique(models.Model):
@@ -85,5 +87,5 @@ class Historique(models.Model):
 
 class Dispo(models.Model):
     admin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Admin')
+    id = models.AutoField(primary_key=True)
     Date = models.DateField(null=True, blank=True)
-    Hour = models.TimeField(null=True, blank=True)

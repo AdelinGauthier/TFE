@@ -84,18 +84,21 @@
                             <label for="{{ form2.Date.id_for_label }}">Choisissez une date</label>
                             <select id="my_dates" class="form-control inputstl option" title="my_dates" name="my_dates">
                                 {% for formItem in form2 %}
-                                    <option value="{{ formItem.Date }} à {{ formItem.Hour }}">{{ formItem.Date }} à {{ formItem.Hour }}</option>
+                                    <option value="{{ formItem.id }}">{{ formItem.Date }} à 17h45</option>
+                                    <script>document.getElementById("buttonReserv").disabled = false;</script>
                                 {% empty %}
                                     <option value="">Pas de date disponible</option>
+                                    <script>document.getElementById("buttonReserv").disabled = true;</script>
                                 {% endfor %}
                             </select>
                         </li>
                     </div>
                 </ul>
                 <br>
+
                 <br>
                 <div class="col-md-7 text-center">
-                     <button type="submit" class="btn-lg btn-dark center-block reservButton">Réserver</button>
+                     <button type="submit" id="buttonReserv" class="btn-lg btn-dark center-block reservButton">Réserver</button>
                 </div>
                 <div class="remarques">
                     Attention :<br>
